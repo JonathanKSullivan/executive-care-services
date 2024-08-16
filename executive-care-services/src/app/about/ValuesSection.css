@@ -1,0 +1,75 @@
+.values-section {
+    padding: var(--padding-section);
+    background: var(--background-gradient);
+    text-align: center;
+    color: white;
+}
+
+.values-section h2 {
+    font-size: var(--font-size-title);
+    margin-bottom: var(--padding-large);
+    color: var(--secondary-color);
+}
+
+.values-section p {
+    font-size: var(--font-size-text);
+    max-width: var(--max-width-container);
+    margin: 0 auto var(--padding-large) auto;
+    color: #f8f9fa;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--padding-large);
+}
+
+.value-card {
+    background-color: var(--card-background-color);
+    padding: var(--padding-large); /* Increased padding for better content spacing */
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softened shadow for a more polished look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Standardized transition speed */
+    max-width: 320px; /* Increased width for better readability and space */
+    text-align: center; /* Center-aligned text for a balanced look */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items to center for better visual hierarchy */
+}
+
+.value-card:hover {
+    transform: translateY(-10px); /* Increased translateY for a more dynamic hover effect */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover for a more pronounced effect */
+}
+
+.value-icon {
+    width: 120px; /* Increased size for a more prominent icon */
+    height: 120px;
+    margin-bottom: var(--padding-medium);
+    object-fit: contain; /* Ensure icons fit within their container */
+}
+
+.value-card h3 {
+    font-size: 1.75rem; /* Increased font size for better emphasis on titles */
+    color: var(--primary-color);
+    margin-bottom: var(--padding-small);
+}
+
+.value-card p {
+    font-size: var(--font-size-medium); /* Adjusted font size for improved readability */
+    color: #e9ecef; /* Lightened text color for a softer appearance */
+    line-height: 1.5; /* Increased line height for better text spacing */
+    padding: 0 var(--padding-small); /* Added padding for better text spacing */
+}
+
+@media (max-width: 768px) {
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-card {
+        max-width: 100%;
+    }
+}

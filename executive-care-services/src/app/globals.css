@@ -1,0 +1,109 @@
+/* Root CSS variables for easier theme management */
+:root {
+  --primary-color: #1E3A8A; /* Main brand color */
+  --secondary-color: #14B8A6; /* Accent color */
+  --text-color: #374151; /* General text color */
+  --background-color: #F5F7FA; /* Background color */
+  --font-size-title: 2.5rem; /* Main title font size */
+  --font-size-text: 1.125rem; /* Standard text font size */
+  --font-size-large-text: 1.25rem; /* Larger text for emphasis */
+  --line-height-text: 1.6; /* Line height for text */
+  --padding-section: 4rem 1rem; /* Padding for sections */
+  --max-width-container: 1200px; /* Maximum container width */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Box shadow */
+  --border-radius: 10px; /* Border radius for elements */
+  
+  /* Additional global variables */
+  --background-gradient: linear-gradient(135deg, #1E3A8A, #14B8A6); /* Gradient for backgrounds */
+  --footer-background-color: #1A336B; /* Footer background */
+  --footer-bottom-background-color: #142D51; /* Footer bottom background */
+  --link-hover-color: #14B8A6; /* Link hover color */
+  --footer-text-color: #FFFFFF; /* Footer text color */
+  --footer-shadow-color: rgba(0, 0, 0, 0.15); /* Footer shadow color */
+  --button-hover-color: #0d9488; /* Button hover color */
+  --border-radius-large: 12px; /* Larger border radius */
+  --transition-speed: 0.4s; /* Transition speed for effects */
+  --font-size-large: 3rem; /* Large font size */
+  --font-size-medium: 1.25rem; /* Medium font size */
+  --font-size-small: 1rem; /* Small font size */
+  --padding-large: 2rem; /* Large padding */
+  --padding-small: 1rem; /* Small padding */
+  --navbar-height: 60px; /* Navbar height */
+
+  /* CTA Specific Colors and Fonts */
+  --cta-primary-color: #8B0000; /* CTA primary color */
+  --cta-secondary-color: #C71585; /* CTA secondary color */
+  --cta-text-color: #4B0082; /* CTA text color */
+  --cta-background-color: #FFF0F5; /* CTA background color */
+  --cta-button-hover-color: #9C27B0; /* CTA button hover color */
+  --cta-font-family-primary: 'Georgia', serif; /* Primary font for CTA */
+  --cta-font-family-secondary: 'Times New Roman', serif; /* Secondary font for CTA */
+
+  /* Card Styles */
+  --card-background-color: rgba(255, 255, 255, 0.6); /* Card background color */
+  --card-hover-color: #FFE4E1; /* Card hover effect color */
+  --benefit-title-color: #C71585; /* Benefit title color */
+  
+  /* Font Families */
+  --font-primary: 'Montserrat', Arial, sans-serif; /* Primary font */
+  --font-secondary: 'Raleway', Helvetica, sans-serif; /* Secondary font */
+  --font-body: 'Open Sans', Verdana, sans-serif; /* Body text font */
+  --font-accent: 'Poppins', Tahoma, sans-serif; /* Accent font */
+}
+
+/* Global body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Common link styles */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Common button styles */
+button {
+  cursor: pointer;
+  font-size: var(--font-size-small);
+  border-radius: var(--border-radius);
+  border: none;
+  padding: var(--padding-small) var(--padding-large);
+  font-family: var(--font-accent);
+  transition: background-color var(--transition-speed) ease;
+}
+
+/* Box shadow for elements like footer */
+.box-shadow {
+  box-shadow: 0 4px 12px var(--footer-shadow-color);
+}
+
+/* Headings and Titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+}
+
+/* Subheadings and Accent Text */
+.subheading, .accent-text {
+  font-family: var(--font-secondary);
+}
+
+/* Responsive Design (shared) */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  p {
+      font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,46 @@
+.introduction {
+    padding: 60px 20px;
+    background-color: #f3f4f6; /* Softer background color for a more luxurious feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Increase max-width for better use of space */
+    margin: 0 auto;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1 1 50%;
+    padding-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50; /* Darker color for headings */
+    font-weight: bold;
+}
+
+.text-content p {
+    font-size: 1.25rem;
+    color: #4a4a4a; /* Slightly darker text for better readability */
+    line-height: 1.6;
+}
+
+.image-content {
+    flex: 1 1 50%;
+    text-align: center; /* Center the image in its container */
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Slightly more rounded corners for a softer look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow for a more pronounced effect */
+}

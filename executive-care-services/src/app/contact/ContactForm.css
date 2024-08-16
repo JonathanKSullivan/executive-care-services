@@ -1,0 +1,77 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: var(--card-background-color); /* Assuming a variable for background color */
+    border-radius: var(--border-radius); /* Assuming a variable for border radius */
+    box-shadow: var(--box-shadow); /* Assuming a variable for box shadow */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: var(--font-primary); /* Assuming a variable for font family */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius); /* Assuming a variable for border radius */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color); /* Assuming a variable for focus color */
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.2); /* Adding a subtle glow effect on focus */
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color); /* Assuming a variable for button color */
+    color: white;
+    font-size: 1rem;
+    font-family: var(--font-accent); /* Assuming a variable for font family */
+    border: none;
+    border-radius: var(--border-radius); /* Assuming a variable for border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-color); /* Assuming a variable for hover color */
+    transform: translateY(-2px);
+}
+
+.submit-button:focus {
+    outline: 3px solid var(--primary-color); /* Assuming a variable for focus color */
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .submit-button {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+}

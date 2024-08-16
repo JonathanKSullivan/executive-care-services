@@ -1,0 +1,63 @@
+.service-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--cta-background-color); /* Use a distinct CTA background color */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-cta:hover {
+    background-color: var(--cta-hover-background-color); /* Subtle background color change on hover */
+}
+
+.cta-subtext {
+    margin-bottom: 1rem;
+    font-size: var(--font-size-small);
+    color: var(--text-color-muted);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.cta-icon {
+    margin-right: 0.5rem; /* Space between icon and text */
+    display: inline-block;
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+@media (max-width: 768px) {
+    .service-cta {
+        padding: 2rem 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .cta-subtext {
+        font-size: var(--font-size-small);
+    }
+}

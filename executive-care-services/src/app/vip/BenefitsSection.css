@@ -1,0 +1,92 @@
+.benefits-section {
+    background: url('../assets/model3.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: var(--padding-section);
+    text-align: center;
+    color: var(--footer-text-color);
+}
+
+.benefits-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    z-index: 1;
+}
+
+.section-title {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: var(--font-size-title);
+    margin-bottom: var(--padding-small);
+}
+
+.benefits-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--padding-small);
+}
+
+.benefit-card {
+    background-color: var(--card-background-color);
+    padding: var(--padding-large);
+    max-width: 300px;
+    text-align: center;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.benefit-card:hover {
+    background-color: var(--card-hover-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Reduced shadow opacity for a softer effect */
+}
+
+.benefit-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: var(--padding-small);
+}
+
+.benefit-title {
+    color: var(--benefit-title-color);
+    font-size: var(--font-size-large-text);
+    margin-bottom: var(--padding-small);
+}
+
+.benefit-description {
+    color: var(--text-color);
+    font-size: var(--font-size-text);
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .benefit-title {
+        font-size: var(--font-size-medium);
+    }
+
+    .benefit-description {
+        font-size: var(--font-size-small);
+    }
+
+    .benefit-icon {
+        width: 70px;
+        height: 70px;
+    }
+}

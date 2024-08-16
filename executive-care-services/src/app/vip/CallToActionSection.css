@@ -1,0 +1,53 @@
+.cta-section {
+    background: url('../assets/vip-pricing-bg-booking.png');
+    background-size: cover;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--cta-text-color); /* Update text color to contrast with the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-large); /* Larger border radius for a softer look */
+    box-shadow: var(--box-shadow); /* Use global box-shadow for consistency */
+}
+
+.cta-content {
+    max-width: var(--max-width-container); /* Ensure content is centered and not too wide */
+}
+
+.section-title {
+    color: #FFF;
+    font-size: var(--font-size-large); /* Make the title more prominent */
+    margin-bottom: var(--padding-small); /* Adjust spacing below the title */
+    font-family: var(--cta-font-family-primary); /* Use a different font family for distinction */
+}
+
+.cta-button {
+    background-color: var(--cta-secondary-color); /* Use secondary color for the button */
+    color: var(--cta-text-color); /* Ensure button text is readable */
+    padding: var(--padding-small) var(--padding-large);
+    border-radius: var(--border-radius-large); /* Larger border radius for the button */
+    font-size: var(--font-size-medium); /* Slightly larger text for the button */
+    font-family: var(--cta-font-family-secondary); /* Consistent font with the section */
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-button-hover-color); /* Change background color on hover */
+    transform: translateY(-3px); /* Add a subtle lift effect on hover */
+}
+
+.cta-button:focus {
+    outline: 3px solid var(--cta-primary-color); /* High contrast focus outline */
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button size for smaller screens */
+        padding: var(--padding-small) var(--padding-small);
+    }
+}

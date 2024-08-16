@@ -1,0 +1,131 @@
+/* Hero Section Styles */
+.heroSection {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/testimonial-hero-bg.png') center/cover no-repeat;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contentWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay effect */
+    border-radius: var(--border-radius);
+}
+
+.heroSection h1 {
+    font-size: var(--font-size-title);
+    margin-bottom: 1rem;
+    color: white; /* Ensure the title color is white */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better contrast */
+}
+
+.heroSection p {
+    font-size: var(--font-size-text);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: white; /* Ensure the text color is white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for better contrast */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Case Study List Page Styles */
+.caseStudyListPage {
+    margin: 0 auto;
+}
+
+.caseStudyListPage h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.caseStudyListPage p {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.caseStudyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.caseStudySummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-background-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.caseStudySummary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-small);
+}
+
+.caseStudySummary h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.caseStudySummary p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.ctaLink {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ctaLink:hover {
+    background-color: var(--button-hover-color);
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 2rem 1rem;
+    }
+
+    .heroSection h1 {
+        font-size: var(--font-size-title-mobile);
+    }
+
+    .heroSection p {
+        font-size: var(--font-size-text-mobile);
+    }
+}

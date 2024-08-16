@@ -1,0 +1,82 @@
+.addon-service {
+    background-color: var(--card-background-color);
+    padding: 1.5rem; /* Slightly reduced padding */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 280px; /* Reduced max width */
+    flex: 1 1 calc(33.333% - 2rem); /* Ensure three cards per row */
+}
+
+.addon-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.addon-icon {
+    width: 100px; /* Larger icon */
+    height: 100px; /* Larger icon */
+    margin-bottom: 1.5rem;
+}
+
+.addon-service h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.addon-service .price {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}
+
+.addon-service .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;  /* Full-width button */
+    margin-top: auto;  /* Push the button to the bottom */
+}
+
+.addon-service .cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .addon-service {
+        max-width: calc(50% - 1rem); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .addon-service {
+        max-width: 100%; /* One card per row on small screens */
+    }
+
+    .addon-service h4 {
+        font-size: 1.3rem;
+    }
+
+    .addon-service .price {
+        font-size: 1.2rem;
+    }
+
+    .addon-icon {
+        width: 80px; /* Adjusted for smaller screens */
+        height: 80px;
+    }
+}

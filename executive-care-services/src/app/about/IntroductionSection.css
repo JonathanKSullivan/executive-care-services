@@ -1,0 +1,66 @@
+.introduction-section {
+    padding: var(--padding-section);
+    background: url('../assets/about-hero-bg.png') no-repeat center center; /* Adding background image */
+    background-size: cover; /* Make sure the image covers the entire section */
+    text-align: center;
+    color: white;
+    animation: fadeIn var(--transition-speed) ease-in;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content-wrapper {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: var(--padding-large);
+    background-color: var(--card-background-color); /* Using translucent background from global */
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow); /* Using global box shadow */
+}
+
+.introduction-section h1 {
+    color: var(--primary-color);
+    font-size: var(--font-size-title);
+    margin-bottom: var(--padding-small);
+    font-weight: bold;
+    font-family: var(--font-primary); /* Using primary font */
+}
+
+.introduction-section p {
+    color: var(--text-color);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-text);
+    font-family: var(--font-body); /* Using body font */
+}
+
+.introduction-section p strong {
+    color: var(--secondary-color);
+}
+
+.introduction-section p em {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .introduction-section {
+        padding: var(--padding-small);
+    }
+
+    .content-wrapper {
+        padding: var(--padding-small);
+    }
+
+    .introduction-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .introduction-section p {
+        font-size: var(--font-size-small);
+    }
+}

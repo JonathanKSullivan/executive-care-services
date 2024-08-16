@@ -1,0 +1,80 @@
+/* FAQ section container */
+.faq-section {
+    background-color: var(--background-color); /* Using global variable */
+    padding: var(--padding-section); /* Using global variable */
+}
+
+/* Section title */
+.section-title {
+    color: #FFF;
+    text-align: center;
+    font-size: var(--font-size-title); /* Using global variable */
+    margin-bottom: var(--padding-large); /* Using global variable for spacing */
+}
+
+/* FAQ container with fully transparent background */
+.faq-container {
+    max-width: var(--max-width-container); /* Using global variable */
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    padding: var(--padding-small); /* Using global variable */
+    border-radius: var(--border-radius-large); /* Using global variable for rounded corners */
+    box-shadow: var(--box-shadow); /* Using global box shadow */
+}
+
+/* FAQ item */
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: var(--padding-small); /* Using global variable for spacing */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light divider between items */
+}
+
+/* FAQ question */
+.faq-question {
+    color: var(--secondary-color); /* Using global variable */
+    font-size: var(--font-size-medium); /* Using global variable */
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ answer */
+.faq-answer {
+    color: var(--text-color); /* Using global variable */
+    font-size: var(--font-size-small); /* Using global variable */
+    line-height: var(--line-height-text); /* Using global variable */
+}
+
+/* FAQ CTA (Call to Action) */
+.faq-cta {
+    text-align: center;
+    margin-top: var(--padding-large); /* Using global variable for spacing */
+    font-size: var(--font-size-small); /* Using global variable */
+}
+
+.faq-cta a {
+    color: var(--secondary-color); /* Using global variable */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.faq-cta a:hover {
+    color: var(--primary-color); /* Using global variable */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.75rem; /* Adjusted size for responsiveness */
+    }
+
+    .faq-question {
+        font-size: 1.125rem; /* Adjusted size for responsiveness */
+    }
+
+    .faq-answer {
+        font-size: 0.95rem; /* Adjusted size for responsiveness */
+    }
+
+    .faq-cta {
+        font-size: 0.95rem; /* Adjusted size for responsiveness */
+    }
+}

@@ -1,0 +1,40 @@
+.service-header {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: var(--border-radius); /* Consistent border radius */
+    box-shadow: var(--box-shadow); /* Consistent shadow */
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text contrast */
+    border-radius: var(--border-radius);
+}
+
+.service-header h1 {
+    font-size: var(--font-size-title);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1; /* Ensure the text stays on top of the overlay */
+}
+
+@media (max-width: 768px) {
+    .service-header {
+        padding: 3rem 1rem;
+    }
+
+    .service-header h1 {
+        font-size: var(--font-size-title-mobile); /* Adjust for mobile */
+    }
+}

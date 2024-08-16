@@ -1,0 +1,38 @@
+.expectation-setter {
+    background-color: var(--card-background-color); /* Assuming you have a variable for card backgrounds */
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius); /* Assuming a variable for border radius */
+    box-shadow: var(--box-shadow); /* Assuming a variable for box shadow */
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expectation-setter h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color); /* Assuming a variable for primary color */
+    margin-bottom: 1rem;
+    font-family: var(--font-primary); /* Assuming a variable for the primary font */
+}
+
+.expectation-setter p {
+    font-size: 1.125rem;
+    color: var(--text-color); /* Assuming a variable for text color */
+    line-height: var(--line-height-text); /* Assuming a variable for line height */
+}
+
+.expectation-setter p strong {
+    color: var(--secondary-color); /* Highlight important text with the secondary color */
+}
+
+.expectation-setter a {
+    color: var(--primary-color); /* Match link color with primary color */
+    text-decoration: underline;
+    transition: color var(--transition-speed);
+}
+
+.expectation-setter a:hover {
+    color: var(--button-hover-color); /* Assuming a variable for hover state */
+}

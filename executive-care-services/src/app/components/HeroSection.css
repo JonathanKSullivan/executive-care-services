@@ -1,0 +1,112 @@
+.hero-section {
+    background: var(--background-gradient);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-large);
+    animation: fadeIn var(--transition-speed) ease-in;
+    color: white;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-right: var(--padding-large);
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--padding-small);
+    animation: slideIn var(--transition-speed) ease-in;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); }
+    to { transform: translateY(0); }
+}
+
+.hero-content p {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--padding-large);
+    line-height: 1.6;
+}
+
+.hero-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--padding-small) var(--padding-large);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.hero-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.hero-button:focus {
+    outline: 3px solid white;
+}
+
+.hero-image-container {
+    flex-shrink: 0;
+    width: 800px;
+    height: 500px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top; /* Ensures the image is cropped from the bottom */
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.125rem;
+    }
+
+    .hero-button {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .hero-image {
+        margin-top: var(--padding-small);
+        width: 100%;
+        height: auto;
+        object-position: center; /* Adjusts for smaller screens */
+    }
+}

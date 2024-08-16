@@ -1,0 +1,51 @@
+.contact-page main {
+    padding: 2rem;
+}
+
+.contact-form-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-form-container > * {
+    flex: 1;
+    min-width: 300px;
+}
+
+.additional-info-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.location-map-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.testimonials-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+    .contact-form-container {
+        flex-direction: column;
+    }
+}

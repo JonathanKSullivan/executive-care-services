@@ -1,0 +1,86 @@
+.membership-pricing {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.membership-pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.membership-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.membership-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.membership-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.membership-card .price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.membership-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-card ul li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.addon-container {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.addon-container h3 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.addon-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.addon-item {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 15px;
+}

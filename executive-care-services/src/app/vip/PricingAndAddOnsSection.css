@@ -1,0 +1,49 @@
+.pricing-addons-section {
+    background: url('../assets/vip-pricing-bg.png');
+    background-size: cover;
+    padding: 3rem 1rem;
+}
+
+.section-title, .section-subtitle {
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 2rem;
+}
+
+.pricing-options, .addons-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.pricing-card, .addon-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.pricing-card h3, .addon-card h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price, .addon-card .price {
+    color: var(--benefit-title-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}

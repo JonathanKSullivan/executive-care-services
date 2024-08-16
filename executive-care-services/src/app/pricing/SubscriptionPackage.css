@@ -1,0 +1,119 @@
+.subscription-package {
+    background-color: var(--card-background-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    flex: 1 1 calc(33.333% - 2rem); /* Adjusting to take up 33.33% of the row minus the margin */
+    max-width: 275px; /* Reduce the max-width to make the cards narrower */
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    text-align: left; /* Align text to the left for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-package:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.package-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.package-header img {
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.subscription-package h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.subscription-package .price {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.subscription-package .description {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.divider {
+    margin: 1rem 0;
+    border-top: 1px solid var(--primary-color);
+}
+
+.subscription-package ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-package ul li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-divider {
+    border: none;
+    border-top: 1px solid var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subscription-package .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: auto;
+    align-self: center;
+}
+
+.subscription-package .cta-button:hover {
+    background-color: var(--button-hover-color);
+}
+
+@media (max-width: 1024px) {
+    .subscription-package {
+        flex: 1 1 calc(50% - 2rem); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .subscription-package {
+        flex: 1 1 100%; /* One card per row on mobile */
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Adjust the gap between the cards */
+    justify-content: space-between; /* Ensure cards are spaced evenly across the row */
+}

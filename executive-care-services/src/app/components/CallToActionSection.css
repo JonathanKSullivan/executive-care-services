@@ -1,0 +1,57 @@
+.cta-section {
+    background-color: var(--cta-background-color); /* Consistent background color */
+    padding: var(--padding-section); /* Use shared padding */
+    text-align: center;
+    border-radius: var(--border-radius-large); /* Consistent border radius */
+    box-shadow: var(--box-shadow); /* Consistent box shadow */
+}
+
+.cta-title {
+    color: var(--primary-color); /* Consistent primary color */
+    font-size: var(--font-size-large); /* Consistent font size */
+    font-family: var(--font-primary); /* Consistent font family */
+    margin-bottom: var(--padding-small); /* Consistent spacing */
+}
+
+.cta-subtitle {
+    color: var(--text-color); /* Consistent text color */
+    font-size: var(--font-size-medium); /* Consistent font size */
+    font-family: var(--font-secondary); /* Consistent font family */
+    margin-bottom: var(--padding-large); /* Consistent spacing */
+}
+
+.cta-button {
+    background-color: var(--secondary-color); /* Consistent secondary color */
+    color: white;
+    padding: var(--padding-small) var(--padding-large); /* Consistent padding */
+    border-radius: var(--border-radius); /* Consistent border radius */
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-medium); /* Consistent font size */
+    font-family: var(--font-accent); /* Consistent font family */
+    transition: background-color var(--transition-speed), transform var(--transition-speed); /* Consistent transition */
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color); /* Consistent hover color */
+    transform: translateY(-3px); /* Consistent hover effect */
+}
+
+.cta-button:focus {
+    outline: 3px solid var(--primary-color); /* Consistent focus outline */
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: var(--font-size-title); /* Consistent responsive font size */
+    }
+
+    .cta-subtitle {
+        font-size: var(--font-size-small); /* Consistent responsive font size */
+    }
+
+    .cta-button {
+        font-size: var(--font-size-small); /* Consistent responsive font size */
+        padding: var(--padding-small); /* Consistent responsive padding */
+    }
+}

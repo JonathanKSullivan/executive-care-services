@@ -1,0 +1,44 @@
+.thank-you-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.popular-content-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popular-content-links ul li {
+    margin-bottom: 1rem;
+}
+
+.popular-content-links ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.popular-content-links ul li a:hover {
+    color: var(--link-hover-color);
+}
+
+.social-media-links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media-links ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media-links ul li a:hover {
+    color: var(--link-hover-color);
+}

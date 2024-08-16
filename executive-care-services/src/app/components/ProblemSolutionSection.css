@@ -1,0 +1,92 @@
+/* ProblemSolutionSection container */
+.problem-solution-section {
+    background-color: var(--background-color);
+    padding: var(--padding-section);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+/* Section title */
+.section-title {
+    color: #FFF;
+    font-size: var(--font-size-title);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Section text */
+.section-text {
+    color: var(--text-color);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Larger text for the first paragraph */
+.section-text-large {
+    font-size: var(--font-size-large-text);
+    margin-bottom: 2rem;
+}
+
+/* Image container */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        padding-right: 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .section-text-large {
+        font-size: 1.125rem;
+    }
+}

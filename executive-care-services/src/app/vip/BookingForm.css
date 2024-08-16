@@ -1,0 +1,95 @@
+
+.booking-form {
+    background: url('../assets/vip-pricing-bg-booking.png');
+    background-size: cover;
+    padding: 6rem;
+    text-align: center;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+.booking-form h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--padding-small);
+    color: #FFF;
+}
+
+.form-group {
+    margin-bottom: var(--padding-small);
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #FFF;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+    font-size: var(--font-size-text);
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.checkbox-item {
+    color: #000 !important;
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: var(--text-color);
+}
+
+.checkbox-item.selected {
+    background-color: var(--cta-primary-color);
+    color: white  !important;
+}
+
+.checkbox-item input {
+    display: none; /* Hide the checkbox itself */
+}
+
+.cta-button {
+    background-color: var(--cta-secondary-color);
+    color: white;
+    padding: var(--padding-small) var(--padding-large);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--font-size-medium);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: var(--padding-small);
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-button-hover-color);
+    transform: translateY(-3px);
+}
+
+.card-element {
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+    font-size: var(--font-size-text);
+    box-sizing: border-box;
+    background-color: #ffffff;
+}

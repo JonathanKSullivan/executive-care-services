@@ -1,0 +1,87 @@
+/* Testimonials section container with background image */
+.testimonials-section {
+    background: url('../assets/model1.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: var(--padding-large) var(--padding-small);
+    text-align: center;
+    color: white; /* Ensure text contrasts with background */
+}
+
+/* Adding a dark overlay for better text readability */
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.section-title {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: var(--font-size-title);
+    margin-bottom: var(--padding-small);
+}
+
+/* Testimonials container with responsive flex layout */
+.testimonials-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+    background-color: var(--card-background-color);
+    padding: var(--padding-small);
+    max-width: 300px;
+    text-align: center;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: var(--padding-small);
+}
+
+.testimonial-name {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    .testimonial-name {
+        font-size: 1.1rem;
+    }
+}

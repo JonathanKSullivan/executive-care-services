@@ -1,0 +1,75 @@
+.faq-section {
+    background: url('../assets/model4.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section-title {
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    font-size: 2.5rem;
+    font-family: var(--font-primary);
+    margin-bottom: 2.5rem;
+}
+
+.faq-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--card-background-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    color: var(--benefit-title-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-family: var(--font-primary);
+}
+
+.faq-answer {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-family: var(--font-secondary);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        font-size: 1.2rem;
+    }
+
+    .faq-answer {
+        font-size: 1rem;
+    }
+}
