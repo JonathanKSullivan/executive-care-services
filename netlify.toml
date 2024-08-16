@@ -2,6 +2,8 @@
   command = "cd executive-care-services && npm install && npm run build"
   publish = "executive-care-services/.next"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "/_next/static/*"
@@ -13,10 +15,8 @@
   to = "/assets/:splat"
   status = 200
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Remove the wildcard redirect to index.html as it may interfere with Next.js routing
+# This is handled by Next.js when using @netlify/plugin-nextjs
 
 [[headers]]
   for = "/*"
