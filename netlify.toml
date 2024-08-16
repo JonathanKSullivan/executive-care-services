@@ -1,5 +1,5 @@
 [build]
-  command = "cd executive-care-services && npm run build"
+  command = "cd executive-care-services && npm install && npm run build"
   publish = "executive-care-services/.next"
 
 [[redirects]]
