@@ -24,7 +24,13 @@ const ProblemSolutionSection: React.FC = () => {
                 </div>
                 
                 <div className="image-container">
-                    <Image src={assets.problem.src} alt="Placeholder Image" className="section-image" />
+                    <Image 
+                        src={assets.problem.src} 
+                        alt="Placeholder Image" 
+                        className="section-image" 
+                        width={600}  // Add the desired width here
+                        height={400} // Add the desired height here
+                    />
                 </div>
             </div>
         </section>

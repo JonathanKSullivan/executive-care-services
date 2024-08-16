@@ -15,7 +15,13 @@ const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <Image src={assets.logo.src} alt="Executive Care Services" className="navbar-image" />
+                <Image 
+                    src={assets.logo.src} 
+                    alt="Executive Care Services" 
+                    className="navbar-image" 
+                    width={100} 
+                    height={50} // You can add height as well for proper aspect ratio
+                />
                 <a href="/">Executive Care Services</a>
             </div>
             <div className={`navbar-links ${isOpen ? 'open' : ''}`}>

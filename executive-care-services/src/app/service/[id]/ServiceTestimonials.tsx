@@ -20,7 +20,13 @@ const ServiceTestimonials: React.FC<ServiceTestimonialsProps> = ({ testimonials 
                 {testimonials.map((testimonial, index) => (
                     <div className="testimonial-item" key={index}>
                         {testimonial.image && (
-                            <Image src={testimonial.image} alt={testimonial.author} className="testimonial-image" />
+                            <Image 
+                                src={testimonial.image} 
+                                alt={testimonial.author} 
+                                className="testimonial-image" 
+                                width={150} // Specify the width you want
+                                height={150} // Add a height property for consistency
+                            />
                         )}
                         <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-author">- {testimonial.author}</p>

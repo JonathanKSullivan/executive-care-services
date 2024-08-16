@@ -37,6 +37,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description, buttonTex
                         src={assets.hero.src} 
                         alt="Placeholder Image" 
                         className="hero-image"
+                        width={600} // Add width property here
+                        height={400} // Add height property here
                     />
                 </div>
             </div>

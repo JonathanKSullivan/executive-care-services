@@ -19,7 +19,12 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ features }) => {
             <div className="features-grid">
                 {features.map((feature, index) => (
                     <div className="feature-card" key={index}>
-                        <Image src={feature.icon} alt={`Icon representing ${feature.title}`} />
+                        <Image 
+                            src={feature.icon} 
+                            alt={`Icon representing ${feature.title}`} 
+                            width={100} // Set your desired width here
+                            height={100} // Set your desired height here to maintain aspect ratio
+                        />
                         <h3>{feature.title}</h3>
                         <p>{feature.description}</p>
                     </div>

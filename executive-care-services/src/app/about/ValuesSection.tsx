@@ -37,7 +37,13 @@ const ValuesSection: React.FC = () => {
             <div className="values-container">
                 {values.map((value, index) => (
                     <div key={index} className="value-card">
-                        <Image src={value.icon} alt={value.title} className="value-icon" />
+                        <Image 
+                            src={value.icon} 
+                            alt={value.title} 
+                            className="value-icon" 
+                            width={100}  // Set the desired width here
+                            height={100} // Set the desired height here
+                        />
                         <h3>{value.title}</h3>
                         <p>{value.description}</p>
                     </div>

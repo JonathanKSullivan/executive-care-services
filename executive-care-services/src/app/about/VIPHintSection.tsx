@@ -18,6 +18,8 @@ const VIPHintSection: React.FC = () => {
                         src={assets.about_ecs.src}  // Placeholder image URL
                         alt="VIP Service"
                         className="vip-hint-image"
+                        width={500}
+                        height={300} // Adding the height property
                     />
                 </div>
             </div>

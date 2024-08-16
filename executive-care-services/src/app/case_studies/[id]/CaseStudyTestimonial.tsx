@@ -8,6 +8,8 @@ interface CaseStudyTestimonialProps {
         clientTitle: string;
         quote: string;
         image?: string;
+        imageWidth?: number; // Optional width property for the image
+        imageHeight?: number; // Optional height property for the image
     };
 }
 
@@ -17,7 +19,14 @@ const CaseStudyTestimonial: React.FC<CaseStudyTestimonialProps> = ({ testimonial
             <blockquote>
                 <p>&ldquo;{testimonial.quote}&rdquo;</p>
                 <footer>
-                    {testimonial.image && <Image src={testimonial.image} alt={testimonial.clientName} />}
+                    {testimonial.image && (
+                        <Image
+                            src={testimonial.image}
+                            alt={testimonial.clientName}
+                            width={testimonial.imageWidth || 100} // Default width of 100 if not provided
+                            height={testimonial.imageHeight || 150} // Default height of 150 if not provided
+                        />
+                    )}
                     <cite>
                         {testimonial.clientName}, {testimonial.clientTitle}
                     </cite>

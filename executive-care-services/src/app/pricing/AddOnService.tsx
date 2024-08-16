@@ -14,7 +14,15 @@ interface AddOnServiceProps {
 const AddOnService: React.FC<AddOnServiceProps> = ({ id, title, price, icon }) => {
     return (
         <div className="addon-service">
-            {icon && <Image src={icon} alt={title} className="addon-icon" />}
+            {icon && (
+                <Image 
+                    src={icon} 
+                    alt={title} 
+                    className="addon-icon" 
+                    width={50} // Add width property here
+                    height={50} // Add height property here
+                />
+            )}
             <h4>{title}</h4>
             <p className="price">{price}</p>
             <Link href={`/service/${id}`} className="cta-button">

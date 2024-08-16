@@ -28,7 +28,13 @@ const BenefitsSection: React.FC = () => {
             <div className="benefits-container">
                 {benefits.map((benefit, index) => (
                     <div key={index} className="benefit-card">
-                        <Image src={benefit.icon.src} alt={benefit.title} className="benefit-icon" />
+                        <Image 
+                            src={benefit.icon.src} 
+                            alt={benefit.title} 
+                            className="benefit-icon" 
+                            width={100} // Set the width here, e.g., 100px
+                            height={100} // Set the height here, e.g., 100px
+                        />
                         <h3 className="benefit-title">{benefit.title}</h3>
                         <p className="benefit-description">{benefit.description}</p>
                     </div>

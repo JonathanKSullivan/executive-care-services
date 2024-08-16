@@ -19,7 +19,13 @@ const TestimonialsSection: React.FC = () => {
             <div className="testimonials-container">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="testimonial-card">
-                        <Image src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+                        <Image 
+                            src={testimonial.image} 
+                            alt={testimonial.name} 
+                            className="testimonial-image" 
+                            width={200} // Add width property
+                            height={200} // Add height property to maintain aspect ratio
+                        />
                         <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-name">{testimonial.name}</p>
                         <div className="testimonial-rating">
@@ -30,10 +36,20 @@ const TestimonialsSection: React.FC = () => {
             </div>
             <div className="review-logos">
                 <a href="https://www.google.com/maps/place/Your+Business+Name" target="_blank" rel="noopener noreferrer">
-                    <Image src={assets.google_reviews.src} alt="Google Reviews" />
+                    <Image 
+                        src={assets.google_reviews.src} 
+                        alt="Google Reviews" 
+                        width={100} // Add width property for the logo
+                        height={30} // Add height property for the logo
+                    />
                 </a>
                 <a href="https://www.yelp.com/biz/Your-Business-Name" target="_blank" rel="noopener noreferrer">
-                    <Image src={assets.yelp.src} alt="Yelp Reviews" />
+                    <Image 
+                        src={assets.yelp.src} 
+                        alt="Yelp Reviews" 
+                        width={100} // Add width property for the logo
+                        height={30} // Add height property for the logo
+                    />
                 </a>
             </div>
         </section>

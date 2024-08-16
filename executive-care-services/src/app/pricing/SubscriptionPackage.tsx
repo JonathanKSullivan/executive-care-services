@@ -10,14 +10,31 @@ interface SubscriptionPackageProps {
     description: string;
     services: { name: string }[];
     image: string;
+    imageWidth?: number; // Optional prop for image width
+    imageHeight?: number; // Optional prop for image height
     children?: React.ReactNode; 
 }
 
-const SubscriptionPackage: React.FC<SubscriptionPackageProps> = ({ id, title, price, description, services, image }) => {
+const SubscriptionPackage: React.FC<SubscriptionPackageProps> = ({ 
+    id, 
+    title, 
+    price, 
+    description, 
+    services, 
+    image, 
+    imageWidth = 300,  // Default width
+    imageHeight = 200  // Default height
+}) => { 
     return (
         <div className="subscription-package">
             <div className="package-header">
-                <Image src={image} alt={title} className="package-image" />
+                <Image 
+                    src={image} 
+                    alt={title} 
+                    className="package-image" 
+                    width={imageWidth} 
+                    height={imageHeight} 
+                />
                 <h3>{title}</h3>
                 <p className="price">{price}</p>
             </div>

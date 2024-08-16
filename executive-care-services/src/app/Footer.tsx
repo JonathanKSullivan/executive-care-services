@@ -8,7 +8,13 @@ const Footer: React.FC = () => {
         <footer className="footer">
             <div className="footer-top">
                 <div className="footer-column footer-about">
-                    <Image src={assets.logo.src} alt="Executive Cleaning Service Logo" className="footer-logo" />
+                    <Image 
+                        src={assets.logo.src} 
+                        alt="Executive Cleaning Service Logo" 
+                        className="footer-logo" 
+                        width={150} // Set your desired width here
+                        height={150} // Set your desired width here
+                    />
                     <p className="footer-description">
                         Transforming homes with personalized care, expert cleaning, and gourmet meals tailored to your lifestyle.
                     </p>
