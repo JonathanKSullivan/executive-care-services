@@ -1,13 +1,14 @@
 import React from 'react';
 import './Footer.css';
 import assets from './assets';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="footer-top">
                 <div className="footer-column footer-about">
-                    <img src={assets.logo.src} alt="Executive Cleaning Service Logo" className="footer-logo" />
+                    <Image src={assets.logo.src} alt="Executive Cleaning Service Logo" className="footer-logo" />
                     <p className="footer-description">
                         Transforming homes with personalized care, expert cleaning, and gourmet meals tailored to your lifestyle.
                     </p>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 import assets from './assets';
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src={assets.logo.src} alt="Executive Care Services" className="navbar-image" />
+                <Image src={assets.logo.src} alt="Executive Care Services" className="navbar-image" />
                 <a href="/">Executive Care Services</a>
             </div>
             <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
@@ -23,6 +24,9 @@ const Navbar: React.FC = () => {
                 <a href="/blog">Blogs</a>
                 <a href="/case_studies">Case Studies</a>
                 <a href="/contact">Contact</a>
+            </div>
+            <div className="navbar-cta">
+                <a href="/booking" className="cta-button">Book a Consultation</a>
             </div>
             <div className="navbar-toggle" onClick={toggleMenu}>
                 <span className={`bar ${isOpen ? 'open' : ''}`}></span>

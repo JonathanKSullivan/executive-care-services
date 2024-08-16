@@ -1,6 +1,7 @@
 import React from 'react';
 import './VIPHintSection.css';
 import assets from '../assets';
+import Image from 'next/image';
 
 const VIPHintSection: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const VIPHintSection: React.FC = () => {
                     </p>
                 </div>
                 <div className="vip-hint-image-container">
-                    <img 
+                    <Image 
                         src={assets.about_ecs.src}  // Placeholder image URL
                         alt="VIP Service"
                         className="vip-hint-image"

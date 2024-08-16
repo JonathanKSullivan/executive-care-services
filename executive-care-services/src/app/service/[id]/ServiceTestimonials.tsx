@@ -1,5 +1,6 @@
 import React from 'react';
 import './ServiceTestimonials.css';
+import Image from 'next/image';
 
 interface Testimonial {
     quote: string;
@@ -19,9 +20,9 @@ const ServiceTestimonials: React.FC<ServiceTestimonialsProps> = ({ testimonials 
                 {testimonials.map((testimonial, index) => (
                     <div className="testimonial-item" key={index}>
                         {testimonial.image && (
-                            <img src={testimonial.image} alt={testimonial.author} className="testimonial-image" />
+                            <Image src={testimonial.image} alt={testimonial.author} className="testimonial-image" />
                         )}
-                        <p className="testimonial-quote">"{testimonial.quote}"</p>
+                        <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-author">- {testimonial.author}</p>
                     </div>
                 ))}

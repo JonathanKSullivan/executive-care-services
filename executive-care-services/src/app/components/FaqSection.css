@@ -6,7 +6,7 @@
 
 /* Section title */
 .section-title {
-    color: #FFF;
+    color: var(--primary-color);
     text-align: center;
     font-size: var(--font-size-title); /* Using global variable */
     margin-bottom: var(--padding-large); /* Using global variable for spacing */

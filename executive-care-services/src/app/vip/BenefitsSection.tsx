@@ -3,6 +3,7 @@
 import React from 'react';
 import './BenefitsSection.css';
 import assets from '../assets';
+import Image from 'next/image';
 
 const benefits = [
     {
@@ -34,7 +35,7 @@ const BenefitsSection: React.FC = () => {
             <div className="benefits-container">
                 {benefits.map((benefit, index) => (
                     <div key={index} className="benefit-card">
-                        <img src={benefit.icon} alt={benefit.title} className="benefit-icon" />
+                        <Image src={benefit.icon} alt={benefit.title} className="benefit-icon" />
                         <h3 className="benefit-title">{benefit.title}</h3>
                         <p className="benefit-description">{benefit.description}</p>
                     </div>

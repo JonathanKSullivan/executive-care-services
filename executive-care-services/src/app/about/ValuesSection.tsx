@@ -1,6 +1,7 @@
 import React from 'react';
 import './ValuesSection.css';
 import assets from '../assets';
+import Image from 'next/image';
 
 const values = [
     { 
@@ -36,7 +37,7 @@ const ValuesSection: React.FC = () => {
             <div className="values-container">
                 {values.map((value, index) => (
                     <div key={index} className="value-card">
-                        <img src={value.icon} alt={value.title} className="value-icon" />
+                        <Image src={value.icon} alt={value.title} className="value-icon" />
                         <h3>{value.title}</h3>
                         <p>{value.description}</p>
                     </div>

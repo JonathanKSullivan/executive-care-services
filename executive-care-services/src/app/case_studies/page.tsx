@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './CaseStudyListPage.module.css';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
+import Image from 'next/image';
 
 interface CaseStudySummaryProps {
     id: number;
@@ -14,7 +15,7 @@ interface CaseStudySummaryProps {
 const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ id, title, description, thumbnail }) => {
     return (
         <div className={styles.caseStudySummary}>
-            <img src={thumbnail} alt={`${title} Thumbnail`} className={styles.thumbnail} />
+            <Image src={thumbnail} alt={`${title} Thumbnail`} className={styles.thumbnail} />
             <div className={styles.caseStudyDetails}>
                 <h3>{title}</h3>
                 <p>{description}</p>
@@ -41,13 +42,13 @@ const CaseStudyListPage: React.FC = () => {
             {/* Hero Section */}
             <section className={styles.heroSection} aria-label="Case Studies Hero Section">
                 <div className={styles.contentWrapper}>
-                    <h1>Success Stories & Case Studies</h1>
-                    <p>Discover how we've partnered with clients to provide exceptional service and achieve remarkable results.</p>
+                    <h1>Success Stories &amp; Case Studies</h1>
+                    <p>Discover how we&apos;ve partnered with clients to provide exceptional service and achieve remarkable results.</p>
                 </div>
             </section>
 
             <h1>Our Case Study</h1>
-            <p>Explore how we've helped Jonathan K. Sullivan and his family achieve a better quality of life.</p>
+            <p>Explore how we&apos;ve helped Jonathan K. Sullivan and his family achieve a better quality of life.</p>
             <div className={styles.caseStudyList}>
                 {caseStudies.map((caseStudy) => (
                     <CaseStudySummary

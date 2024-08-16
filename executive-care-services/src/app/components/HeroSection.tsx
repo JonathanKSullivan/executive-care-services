@@ -2,11 +2,13 @@ import React from 'react';
 import './HeroSection.css';
 import assets from '../assets';
 import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
+import Image from 'next/image';
 
 interface HeroSectionProps {
     title: string;
     description: string;
     buttonText: string;
+    onButtonClick?: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, description, buttonText }) => {
@@ -31,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description, buttonTex
                     </button>
                 </div>
                 <div className="hero-image-container">
-                    <img 
+                    <Image 
                         src={assets.hero.src} 
                         alt="Placeholder Image" 
                         className="hero-image"

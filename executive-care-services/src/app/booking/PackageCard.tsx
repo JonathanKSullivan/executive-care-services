@@ -1,5 +1,6 @@
 import React from 'react';
 import './PackageCard.css';
+import Image from 'next/image';
 
 interface PackageCardProps {
     title: string;
@@ -12,7 +13,7 @@ interface PackageCardProps {
 const PackageCard: React.FC<PackageCardProps> = ({ title, price, description, image, link }) => {
     return (
         <div className="package-card">
-            <img src={image} alt={title} className="package-image" />
+            <Image src={image} alt={title} className="package-image" />
             <div className="package-details">
                 <h3>{title}</h3>
                 <p className="price">{price}</p>

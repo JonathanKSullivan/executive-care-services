@@ -3,6 +3,7 @@ import Parser from 'rss-parser';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import styles from './BlogPage.module.css';
+import Image from 'next/image';
 
 interface BlogPageProps {
     articles: {
@@ -31,7 +32,7 @@ const fetchRSSFeed = async () => {
             title: item.title,
             link: item.link,
             contentSnippet,
-            pubDate: item.pubDate,
+            pubDate: item.pubDate || '', // Provide an empty string as a fallback
             id: item.guid,
             image: imageUrl,
         };
@@ -56,11 +57,17 @@ const BlogPage: React.FC = async () => {
                 <div className={styles.articleList}>
                     {articles.map((article) => (
                         <div key={article.id} className={styles.article}>
-                            <img src={article.image} alt={article.title} className={styles.articleImage} />
+                            <Image 
+                                src={article.image} 
+                                alt={article.title || 'Blog image'} 
+                                className={styles.articleImage} 
+                                width={300}  // Provide appropriate width
+                                height={200} // Provide appropriate height
+                            />
                             <div className={styles.articleContent}>
                                 <h2>{article.title}</h2>
                                 <p>{article.contentSnippet}</p>
-                                <p><small>{new Date(article.pubDate).toLocaleDateString()}</small></p>
+                                <p><small>{new Date(article.pubDate || '').toLocaleDateString()}</small></p> {/* Ensure a fallback for pubDate */}
                                 <a href={article.link} target="_blank" rel="noopener noreferrer" className={styles.readMoreLink}>
                                     Read More
                                 </a>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import './SubscriptionPackage.css';
+import Image from 'next/image';
 
 interface SubscriptionPackageProps {
     id: string;
@@ -16,7 +17,7 @@ const SubscriptionPackage: React.FC<SubscriptionPackageProps> = ({ id, title, pr
     return (
         <div className="subscription-package">
             <div className="package-header">
-                <img src={image} alt={title} className="package-image" />
+                <Image src={image} alt={title} className="package-image" />
                 <h3>{title}</h3>
                 <p className="price">{price}</p>
             </div>

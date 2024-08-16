@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC = () => {
             <div className="testimonials-container">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="testimonial-card">
-                        <p className="testimonial-quote">"{testimonial.quote}"</p>
+                        <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-name">{testimonial.name}</p>
                     </div>
                 ))}

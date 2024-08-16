@@ -1,5 +1,6 @@
 import React from 'react';
 import './CaseStudyPage.css';
+import Image from 'next/image';
 
 interface CaseStudyTestimonialProps {
     testimonial: {
@@ -14,9 +15,9 @@ const CaseStudyTestimonial: React.FC<CaseStudyTestimonialProps> = ({ testimonial
     return (
         <section className="case-study-testimonial">
             <blockquote>
-                <p>"{testimonial.quote}"</p>
+                <p>&ldquo;{testimonial.quote}&rdquo;</p>
                 <footer>
-                    {testimonial.image && <img src={testimonial.image} alt={testimonial.clientName} />}
+                    {testimonial.image && <Image src={testimonial.image} alt={testimonial.clientName} />}
                     <cite>
                         {testimonial.clientName}, {testimonial.clientTitle}
                     </cite>

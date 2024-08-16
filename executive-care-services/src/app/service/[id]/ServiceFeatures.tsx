@@ -1,5 +1,6 @@
 import React from 'react';
 import './ServiceFeatures.css';
+import Image from 'next/image';
 
 interface Feature {
     icon: string;
@@ -18,7 +19,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ features }) => {
             <div className="features-grid">
                 {features.map((feature, index) => (
                     <div className="feature-card" key={index}>
-                        <img src={feature.icon} alt={`Icon representing ${feature.title}`} />
+                        <Image src={feature.icon} alt={`Icon representing ${feature.title}`} />
                         <h3>{feature.title}</h3>
                         <p>{feature.description}</p>
                     </div>

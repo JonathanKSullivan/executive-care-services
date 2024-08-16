@@ -4,12 +4,12 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 0 1rem;
+    padding: 0 1.5rem; /* Increased padding for better spacing */
     height: var(--navbar-height);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better depth */
 }
 
 /* Navbar logo */
@@ -20,34 +20,34 @@
 
 .navbar-logo a {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Slightly larger for better emphasis */
     font-weight: bold;
-    margin-left: 0.5rem;
+    margin-left: 0.75rem; /* Increased spacing for better visual separation */
 }
 
 /* Navbar image */
 .navbar-image {
-    width: 40px;
-    height: 40px;
+    width: 45px; /* Slightly larger for better visibility */
+    height: 45px;
     border-radius: 50%;
 }
 
 /* Navbar links */
 .navbar-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem; /* Increased gap for better spacing */
     align-items: center;
     transition: transform 0.3s ease;
 }
 
 .navbar-links a {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Slightly larger for better readability */
     transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: var(--hover-color);
+    color: var(--cta-secondary-color); /* Updated hover color for better contrast */
 }
 
 /* Navbar toggle (hamburger icon) */
@@ -55,23 +55,23 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    gap: 6px; /* Increased gap for better spacing */
 }
 
 .navbar-toggle .bar {
     height: 3px;
-    width: 25px;
+    width: 28px; /* Slightly wider for better visibility */
     background-color: white;
     transition: all 0.3s ease;
     border-radius: 5px;
 }
 
 .navbar-toggle .bar.open {
-    background-color: var(--hover-color);
+    background-color: var(--cta-secondary-color);
 }
 
 .navbar-toggle .bar:nth-child(1).open {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg); /* Adjusted transform for better alignment */
 }
 
 .navbar-toggle .bar:nth-child(2).open {
@@ -79,7 +79,23 @@
 }
 
 .navbar-toggle .bar:nth-child(3).open {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg); /* Adjusted transform for better alignment */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: var(--cta-primary-color);
+    color: white;
+    padding: 0.75rem 1.75rem; /* Slightly wider padding for better spacing */
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease; /* Added transform transition */
+}
+
+.cta-button:hover {
+    background-color: var(--cta-button-hover-color);
+    transform: translateY(-2px); /* Slight hover effect for better interaction */
 }
 
 /* Responsive adjustments for Navbar */
@@ -93,6 +109,7 @@
         position: absolute;
         top: var(--navbar-height);
         left: 0;
+        padding: 1rem 0; /* Added padding for better spacing */
     }
 
     .navbar-links.open {
@@ -101,5 +118,16 @@
 
     .navbar-toggle {
         display: flex;
+    }
+
+    .navbar-cta {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 90%; /* Adjusted width for better responsiveness */
+        padding: 1rem 0;
+        margin: 0 auto; /* Center the button */
     }
 }

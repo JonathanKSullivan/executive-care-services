@@ -1,6 +1,7 @@
 import React from 'react';
 import './TestimonialsSection.css'; // Use a separate CSS file for styling
 import assets from '../assets';
+import Image from 'next/image';
 
 const testimonials = [
     {
@@ -18,8 +19,8 @@ const TestimonialsSection: React.FC = () => {
             <div className="testimonials-container">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="testimonial-card">
-                        <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
-                        <p className="testimonial-quote">"{testimonial.quote}"</p>
+                        <Image src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+                        <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-name">{testimonial.name}</p>
                         <div className="testimonial-rating">
                             {Array(testimonial.rating).fill('⭐').join('')}
@@ -28,11 +29,11 @@ const TestimonialsSection: React.FC = () => {
                 ))}
             </div>
             <div className="review-logos">
-            <a href="https://www.google.com/maps/place/Your+Business+Name" target="_blank" rel="noopener noreferrer">
-                    <img src={assets.google_reviews.src} alt="Google Reviews" />
+                <a href="https://www.google.com/maps/place/Your+Business+Name" target="_blank" rel="noopener noreferrer">
+                    <Image src={assets.google_reviews.src} alt="Google Reviews" />
                 </a>
                 <a href="https://www.yelp.com/biz/Your-Business-Name" target="_blank" rel="noopener noreferrer">
-                    <img src={assets.yelp.src} alt="Yelp Reviews" />
+                    <Image src={assets.yelp.src} alt="Yelp Reviews" />
                 </a>
             </div>
         </section>

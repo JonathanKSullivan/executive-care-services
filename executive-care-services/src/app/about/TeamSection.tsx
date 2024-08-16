@@ -1,5 +1,6 @@
 import React from 'react';
 import './TeamSection.css';
+import Image from 'next/image';
 
 const teamMembers = [
     { 
@@ -25,7 +26,7 @@ const TeamSection: React.FC = () => {
                 {teamMembers.map((member, index) => (
                     <div key={index} className="team-member">
                         <div className="image-container">
-                            <img src={member.image} alt={member.name} className="team-member-image" />
+                            <Image src={member.image} alt={member.name} className="team-member-image" />
                             <div className="overlay">
                                 <p className="overlay-text">{member.role}</p>
                             </div>
