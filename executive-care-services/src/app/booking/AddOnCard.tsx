@@ -15,13 +15,15 @@ interface AddOnCardProps {
 const AddOnCard: React.FC<AddOnCardProps> = ({ title, price, image, link, width, height }) => {
     return (
         <div className="addon-card">
-            <Image 
-                src={image} 
-                alt={title} 
-                className="addon-image" 
-                width={width || 200} // Set the width here, default to 200px if width is not provided
-                height={height || 200} // Set the height here, default to 200px if height is not provided
-            />
+            <div className="addon-image-container">
+                <Image 
+                    src={image} 
+                    alt={title} 
+                    className="addon-image" 
+                    width={width || 300} // Default width set to 300px
+                    height={height || 200} // Default height set to 200px
+                />
+            </div>
             <div className="addon-content">
                 <h4>{title}</h4>
                 <p className="price">{price}</p>

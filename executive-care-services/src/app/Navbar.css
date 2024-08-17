@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
     height: var(--navbar-height);
     position: sticky;
     top: 0;
@@ -18,6 +18,11 @@
     align-items: center;
 }
 
+.navbar-logo a {
+    display: inline-block;
+}
+
+/* Logo image styling */
 .navbar-image {
     width: 45px;
     height: 45px;
@@ -27,15 +32,16 @@
 /* Navbar links */
 .navbar-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem; /* Slightly reduced gap for better spacing */
     align-items: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navbar-links a {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly reduced font size for better alignment */
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .navbar-links a:hover {
@@ -47,12 +53,12 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 6px;
-    padding: 10px; /* Increase padding for larger click area */
+    gap: 5px; /* Adjusted gap for a more compact look */
+    padding: 10px;
 }
 
 .navbar-toggle .bar {
-    height: 3px;
+    height: 2.5px; /* Slightly thinner bars */
     width: 28px;
     background-color: white;
     transition: all 0.3s ease;
@@ -64,7 +70,7 @@
 }
 
 .navbar-toggle .bar:nth-child(1).open {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg); /* Adjusted for better alignment */
 }
 
 .navbar-toggle .bar:nth-child(2).open {
@@ -72,7 +78,7 @@
 }
 
 .navbar-toggle .bar:nth-child(3).open {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg); /* Adjusted for better alignment */
 }
 
 /* Responsive adjustments for Navbar */
@@ -89,6 +95,7 @@
         padding: 1rem 0;
         transform: translateY(-100%);
         opacity: 0;
+        z-index: 999; /* Ensure the dropdown is above other content */
     }
 
     .navbar-links.open {
@@ -107,8 +114,10 @@
     }
 
     .cta-button {
-        width: 90%;
-        padding: 1rem 0;
-        margin: 0 auto;
+        width: auto;
+        padding: 0.5rem 1rem; /* Reduced padding for a more compact button */
+        font-size: 0.9rem; /* Slightly smaller font size */
+        margin: 1rem auto 0;
+        display: inline-block;
     }
 }
