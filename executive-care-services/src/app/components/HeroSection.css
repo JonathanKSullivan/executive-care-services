@@ -1,6 +1,6 @@
 .hero-section {
     background: var(--background-gradient);
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,11 +23,14 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: var(--padding-small); /* Added padding for breathing space */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .hero-text {
     max-width: 600px;
-    margin-right: var(--padding-large);
+    margin-bottom: var(--padding-small); /* Adjusted for better spacing */
+    flex: 1; /* Ensures the text takes up available space */
 }
 
 .hero-content h1 {
@@ -67,14 +70,15 @@
 }
 
 .hero-image-container {
-    flex-shrink: 0;
-    width: 800px;
-    height: 500px;
+    flex: 1; /* Allows the image container to take up available space */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 600px; /* Max width for larger screens */
+    margin-top: var(--padding-small); /* Spacing between text and image on mobile */
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: top; /* Ensures the image is cropped from the bottom */
     border-radius: var(--border-radius);
@@ -82,31 +86,31 @@
 
 @media (max-width: 768px) {
     .hero-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack content vertically */
     }
 
     .hero-text {
-        margin-right: 0;
+        margin-bottom: var(--padding-small); /* Add space below text */
         text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Adjust font size for mobile */
     }
 
     .hero-content p {
-        font-size: 1.125rem;
+        font-size: 1.125rem; /* Adjust font size for mobile */
     }
 
     .hero-button {
-        font-size: 0.9rem;
-        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem; /* Adjust font size for mobile */
+        padding: 0.75rem 1.5rem; /* Adjust padding for mobile */
     }
 
-    .hero-image {
+    .hero-image-container {
         margin-top: var(--padding-small);
         width: 100%;
+        max-width: 400px; /* Adjust max-width for smaller screens */
         height: auto;
-        object-position: center; /* Adjusts for smaller screens */
     }
 }
