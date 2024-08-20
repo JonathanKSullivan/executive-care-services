@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
         setFeedbackMessage('');
 
         try {
-            const response = await fetch('https://https://executive-care-services-backend.railway.app/contact', {
+            const response = await fetch('https://executive-care-services-backend.railway.app/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

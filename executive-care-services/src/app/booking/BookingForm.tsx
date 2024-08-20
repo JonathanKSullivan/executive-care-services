@@ -70,7 +70,7 @@ const BookingForm: React.FC = () => {
             console.log(paymentMethod);
 
             // Send booking data to backend
-            const response = await fetch('https://https://executive-care-services-backend.railway.app/booking', {
+            const response = await fetch('https://executive-care-services-backend.railway.app/booking', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
