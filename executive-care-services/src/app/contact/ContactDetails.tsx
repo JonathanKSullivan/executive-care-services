@@ -9,11 +9,17 @@ const ContactDetails: React.FC = () => {
             <div className="details-container">
                 <div className="detail-item">
                     <h3>Phone</h3>
-                    <p><a href="tel:+11234567890">(123) 456-7890</a></p>
+                    <p><a href="tel:+13613095008">(361) 309-5008</a></p>
                 </div>
                 <div className="detail-item">
                     <h3>Email</h3>
-                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                    <p><a href="mailto:info@yourexecutivecare.com">info@yourexecutivecare.com</a></p>
+                </div>
+                <div className="detail-item">
+                    <h3>Location</h3>
+                    <p><a href="https://www.google.com/maps/search/?api=1&query=2310+North+Henderson+Ave.+%231565+Dallas,+Texas+75206" target="_blank" rel="noopener noreferrer">
+                        2310 North Henderson Ave. #1565 Dallas, Texas 75206
+                    </a></p>
                 </div>
             </div>
             <div className="social-media">
