@@ -58,8 +58,28 @@ const BookingForm: React.FC = () => {
         if (error) {
             console.error(error);
         } else {
+            // Here you can send `paymentMethod.id` to your server to complete the payment
             console.log(paymentMethod);
-            console.log(formData);
+
+            // Process the rest of your booking data here by sending it to your backend
+            const response = await fetch('https://api.yourexecutivecare.com/booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    paymentMethodId: paymentMethod.id,
+                }),
+            });
+
+            if (response.ok) {
+                console.log('Booking successful!');
+                // Handle successful booking
+            } else {
+                console.error('Booking failed');
+                // Handle failed booking
+            }
         }
     };
 
@@ -70,12 +90,12 @@ const BookingForm: React.FC = () => {
         'Personal Chef On-Site',
         'Wine Pairing with Meals',
         'Physical Therapy Coordination',
-        'Extended Topless or Lingerie Servic',
+        'Extended Topless or Lingerie Service',
         'Refined Luxury Experiences'
     ];
 
     return (
-        <section id="booking" className="booking-form ">
+        <section id="booking" className="booking-form">
             <h2>Join the Epicurean Lifestyle Society</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

@@ -60,8 +60,26 @@ const BookingForm: React.FC = () => {
         } else {
             // Here you can send `paymentMethod.id` to your server to complete the payment
             console.log(paymentMethod);
-            // Process the rest of your booking data here
-            console.log(formData);
+
+            // Process the rest of your booking data here by sending it to your backend
+            const response = await fetch('https://api.yourexecutivecare.com/booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    paymentMethodId: paymentMethod.id,
+                }),
+            });
+
+            if (response.ok) {
+                console.log('Booking successful!');
+                // Handle successful booking
+            } else {
+                console.error('Booking failed');
+                // Handle failed booking
+            }
         }
     };
 
