@@ -20,6 +20,9 @@ const BookingForm: React.FC = () => {
         comments: '',
     });
 
+    const [loading, setLoading] = useState(false);
+    const [feedbackMessage, setFeedbackMessage] = useState('');
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData({
@@ -40,9 +43,13 @@ const BookingForm: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+        setFeedbackMessage('');
 
         if (!stripe || !elements) {
-            return; // Stripe.js has not yet loaded.
+            setLoading(false);
+            setFeedbackMessage('Stripe.js has not yet loaded.');
+            return;
         }
 
         const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -57,11 +64,12 @@ const BookingForm: React.FC = () => {
 
         if (error) {
             console.error(error);
+            setLoading(false);
+            setFeedbackMessage('Error processing payment: ' + error.message);
         } else {
-            // Here you can send `paymentMethod.id` to your server to complete the payment
             console.log(paymentMethod);
 
-            // Process the rest of your booking data here by sending it to your backend
+            // Send booking data to backend
             const response = await fetch('https://api.yourexecutivecare.com/booking', {
                 method: 'POST',
                 headers: {
@@ -74,12 +82,23 @@ const BookingForm: React.FC = () => {
             });
 
             if (response.ok) {
-                console.log('Booking successful!');
-                // Handle successful booking
+                setFeedbackMessage('Booking successful! You will receive a confirmation email shortly.');
+                // Reset form after successful booking
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    consultationMethod: '',
+                    date: '',
+                    selectedPackage: '',
+                    addOns: [],
+                    comments: '',
+                });
             } else {
                 console.error('Booking failed');
-                // Handle failed booking
+                setFeedbackMessage('Booking failed. Please try again.');
             }
+            setLoading(false);
         }
     };
 
@@ -159,8 +178,11 @@ const BookingForm: React.FC = () => {
                     <label htmlFor="card">Payment Details</label>
                     <CardElement id="card" className="card-element" />
                 </div>
-                <button type="submit" className="cta-button">Book Now - $500 (credited towards first month’s service)</button>
+                <button type="submit" className="cta-button" disabled={loading}>
+                    {loading ? 'Processing...' : 'Book Now - $500 (credited towards first month’s service)'}
+                </button>
             </form>
+            {feedbackMessage && <p className="feedback-message">{feedbackMessage}</p>}
         </section>
     );
 };

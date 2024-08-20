@@ -10,6 +10,9 @@ const ContactForm: React.FC = () => {
         message: '',
     });
 
+    const [loading, setLoading] = useState(false);
+    const [feedbackMessage, setFeedbackMessage] = useState('');
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({
@@ -20,25 +23,34 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+        setFeedbackMessage('');
 
-        const response = await fetch('https://api.yourexecutivecare.com/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-
-        if (response.ok) {
-            alert('Form submitted successfully!');
-            // Reset form after submission
-            setFormData({
-                name: '',
-                email: '',
-                message: '',
+        try {
+            const response = await fetch('https://api.yourexecutivecare.com/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
-        } else {
-            alert('Failed to submit the form. Please try again.');
+
+            if (response.ok) {
+                setFeedbackMessage('Form submitted successfully!');
+                // Reset form after submission
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: '',
+                });
+            } else {
+                setFeedbackMessage('Failed to submit the form. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setFeedbackMessage('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -83,7 +95,10 @@ const ContactForm: React.FC = () => {
                 ></textarea>
             </div>
 
-            <button type="submit" className="submit-button">Submit</button>
+            <button type="submit" className="submit-button" disabled={loading}>
+                {loading ? 'Submitting...' : 'Submit'}
+            </button>
+            {feedbackMessage && <p className="feedback-message">{feedbackMessage}</p>}
         </form>
     );
 };
