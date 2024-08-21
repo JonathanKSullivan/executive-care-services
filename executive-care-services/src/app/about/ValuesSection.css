@@ -58,7 +58,7 @@
 
 .value-card p {
     font-size: var(--font-size-medium); /* Adjusted font size for improved readability */
-    color: #e9ecef; /* Lightened text color for a softer appearance */
+    color: var(--text-color);    /* Lightened text color for a softer appearance */
     line-height: 1.5; /* Increased line height for better text spacing */
     padding: 0 var(--padding-small); /* Added padding for better text spacing */
 }

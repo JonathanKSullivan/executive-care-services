@@ -5,7 +5,7 @@
 }
 
 .team-section h2 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: var(--font-size-title);
     margin-bottom: 2rem;
 }
@@ -18,7 +18,7 @@
 }
 
 .team-member {
-    max-width: 300px;
+    max-width: 400px; /* Increased width from 300px to 400px */
     text-align: center;
     background-color: var(--card-background-color);
     border-radius: var(--border-radius-large);
@@ -34,11 +34,14 @@
 
 .image-container {
     position: relative;
+    height: 400px; /* Adjusted height for larger image */
+    overflow: hidden;
 }
 
 .team-member-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
     display: block;
 }
 
