@@ -65,8 +65,8 @@ export default function RootLayout({
             <meta property="og:description" content={metadata.openGraph.description} />
             {Array.isArray(metadata.openGraph.images) && metadata.openGraph.images[0] && (
               <>
-                <meta property="og:image" content={metadata.openGraph.images[0]?.url?.toString()} />
-                <meta property="og:image:width" content={metadata.openGraph.images[0]?.width?.toString()} />
+                {/* <meta property="og:image" content={metadata.openGraph.images[0]?.url?.toString()} /> */}
+                {/* <meta property="og:image:width" content={metadata.openGraph.images[0]?.width?.toString()} /> */}
                 <meta property="og:image:height" content={metadata.openGraph.images[0]?.height?.toString()} />
                 <meta property="og:image:alt" content={metadata.openGraph.images[0]?.alt?.toString()} />
               </>
