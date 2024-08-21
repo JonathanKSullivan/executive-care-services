@@ -3,6 +3,7 @@ import Parser from 'rss-parser';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import styles from './BlogPage.module.css';
+import Image from 'next/image'; // Import the Image component from Next.js
 
 interface BlogPageProps {
     articles: {
@@ -56,13 +57,13 @@ const BlogPage: React.FC = async () => {
                 <div className={styles.articleList}>
                     {articles.map((article) => (
                         <div key={article.id} className={styles.article}>
-                            <img
+                            <Image
                                 src={article.image} 
                                 alt={article.title || 'Blog image'} 
                                 className={styles.articleImage} 
                                 width={300} 
                                 height={200} 
-                                priority={true}
+                                priority={true} // This prop is now valid with the Image component
                             />
                             <div className={styles.articleContent}>
                                 <h2>{article.title}</h2>
