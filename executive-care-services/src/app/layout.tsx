@@ -67,8 +67,8 @@ export default function RootLayout({
               <>
                 {/* <meta property="og:image" content={metadata.openGraph.images[0]?.url?.toString()} /> */}
                 {/* <meta property="og:image:width" content={metadata.openGraph.images[0]?.width?.toString()} /> */}
-                <meta property="og:image:height" content={metadata.openGraph.images[0]?.height?.toString()} />
-                <meta property="og:image:alt" content={metadata.openGraph.images[0]?.alt?.toString()} />
+                {/* <meta property="og:image:height" content={metadata.openGraph.images[0]?.height?.toString()} /> */}
+                {/* <meta property="og:image:alt" content={metadata.openGraph.images[0]?.alt?.toString()} /> */}
               </>
             )}
           </>
@@ -77,14 +77,14 @@ export default function RootLayout({
         {/* Twitter Card */}
         {metadata.twitter && (
           <>
-            <meta name="twitter:card" content={metadata.twitter.card} />
+            {/* <meta name="twitter:card" content={metadata.twitter.card} /> */}
             <meta name="twitter:site" content={metadata.twitter.site?.toString()} />
             <meta name="twitter:title" content={typeof metadata.twitter.title === 'string' ? metadata.twitter.title : metadata.twitter.title?.toString()} />
             <meta name="twitter:description" content={metadata.twitter.description?.toString()} />
             {Array.isArray(metadata.twitter.images) && metadata.twitter.images[0] && (
               <>
-                <meta name="twitter:image" content={metadata.twitter.images[0]?.url?.toString()} />
-                <meta name="twitter:image:alt" content={metadata.twitter.images[0]?.alt?.toString()} />
+                {/* <meta name="twitter:image" content={metadata.twitter.images[0]?.url?.toString()} /> */}
+                {/* <meta name="twitter:image:alt" content={metadata.twitter.images[0]?.alt?.toString()} /> */}
               </>
             )}
           </>
