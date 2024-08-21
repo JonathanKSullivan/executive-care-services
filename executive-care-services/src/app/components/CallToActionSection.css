@@ -4,6 +4,8 @@
     text-align: center;
     border-radius: var(--border-radius-large); /* Consistent border radius */
     box-shadow: var(--box-shadow); /* Consistent box shadow */
+    margin: 0 auto; /* Center the section if needed */
+    max-width: 1200px; /* Optional: Limit the section width for larger screens */
 }
 
 .cta-title {
@@ -18,27 +20,9 @@
     font-size: var(--font-size-medium); /* Consistent font size */
     font-family: var(--font-secondary); /* Consistent font family */
     margin-bottom: var(--padding-large); /* Consistent spacing */
-}
-
-.cta-button {
-    background-color: var(--secondary-color); /* Consistent secondary color */
-    color: white;
-    padding: var(--padding-small) var(--padding-large); /* Consistent padding */
-    border-radius: var(--border-radius); /* Consistent border radius */
-    border: none;
-    cursor: pointer;
-    font-size: var(--font-size-medium); /* Consistent font size */
-    font-family: var(--font-accent); /* Consistent font family */
-    transition: background-color var(--transition-speed), transform var(--transition-speed); /* Consistent transition */
-}
-
-.cta-button:hover {
-    background-color: var(--button-hover-color); /* Consistent hover color */
-    transform: translateY(-3px); /* Consistent hover effect */
-}
-
-.cta-button:focus {
-    outline: 3px solid var(--primary-color); /* Consistent focus outline */
+    max-width: 800px; /* Optional: Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -48,10 +32,8 @@
 
     .cta-subtitle {
         font-size: var(--font-size-small); /* Consistent responsive font size */
-    }
-
-    .cta-button {
-        font-size: var(--font-size-small); /* Consistent responsive font size */
-        padding: var(--padding-small); /* Consistent responsive padding */
+        max-width: 100%; /* Ensure full width on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
     }
 }

@@ -1,19 +1,95 @@
 .onetime-service {
     background-color: var(--card-background-color);
-    padding: 1.5rem;
+    padding: 1.5rem; /* Keep padding consistent */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin-bottom: 1.5rem;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 280px; /* Standardized max-width similar to addon-service */
+    width: 100%; /* Ensure the card takes full width available */
+    flex: 1 1 calc(33.333% - 2rem); /* Consistent layout with addon-service */
+}
+
+.onetime-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Consistent hover effect */
 }
 
 .onetime-service h4 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
 }
 
 .onetime-service .price {
     font-size: 1.2rem;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+}
+
+.onetime-service .cta-button {
+    background-color: var(--primary-color); /* Consistent button color */
+    color: white;
+    padding: 0.5rem 1rem; /* Consistent padding */
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    width: auto; /* Set width to auto to fit content */
+    margin-top: auto;  /* Push the button to the bottom */
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.onetime-service .cta-button:hover {
+    background-color: var(--button-hover-color); /* Hover effect color */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .onetime-service {
+        max-width: calc(50% - 1rem); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .onetime-service {
+        max-width: 90vw; /* Standardized width for mobile devices */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        margin-bottom: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .onetime-service h4 {
+        font-size: 1.3rem; /* Adjusted font size for small screens */
+    }
+
+    .onetime-service .price {
+        font-size: 1.2rem;
+    }
+
+    .onetime-service .cta-button {
+        font-size: 0.9rem; /* Slightly smaller font for button */
+        padding: 0.5rem 1rem; /* Adjusted padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .onetime-service {
+        max-width: 80vw; /* Standardized width for very small screens */
+        padding: 0.75rem; /* Further reduced padding */
+    }
+
+    .onetime-service h4 {
+        font-size: 1.2rem; /* Further adjusted font size */
+    }
+
+    .onetime-service .cta-button {
+        font-size: 0.85rem; /* Smaller button text */
+        padding: 0.5rem 1rem;
+        width: auto; /* Ensure button width fits content */
+    }
 }

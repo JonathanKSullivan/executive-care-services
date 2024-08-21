@@ -5,6 +5,7 @@ import './Navbar.css'; // Import the CSS file
 import assets from './assets';
 import Image from 'next/image';
 import Link from 'next/link'; // Import Link from next/link
+import CtaButton from './components/CtaButton';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ const Navbar: React.FC = () => {
                 <Link href="/blog">Blogs</Link>
                 <Link href="/case_studies">Case Studies</Link>
                 <Link href="/contact">Contact</Link>
-                <Link href="/booking" className="cta-button">Book a Consultation</Link>
+                <CtaButton buttonText="Schedule Your Exclusive Consultation Today" />
             </div>
             <div className="navbar-toggle" onClick={toggleMenu}>
                 <span className={`bar ${isOpen ? 'open' : ''}`}></span>

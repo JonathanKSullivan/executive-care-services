@@ -1,0 +1,27 @@
+.cta-button {
+    background-color: var(--button-hover-color); /* Consistent secondary color */
+    color: white;
+    padding: var(--padding-small) var(--padding-large); /* Consistent padding */
+    border-radius: var(--border-radius); /* Consistent border radius */
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-medium); /* Consistent font size */
+    font-family: var(--font-accent); /* Consistent font family */
+    transition: background-color var(--transition-speed), transform var(--transition-speed); /* Consistent transition */
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color); /* Consistent secondary color */
+    transform: translateY(-3px); /* Consistent hover effect */
+}
+
+.cta-button:focus {
+    outline: 3px solid var(--primary-color); /* Consistent focus outline */
+}
+
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: var(--font-size-small); /* Consistent responsive font size */
+        padding: var(--padding-small); /* Consistent responsive padding */
+    }
+}

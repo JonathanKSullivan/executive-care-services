@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 import PricingHeader from './PricingHeader';
@@ -9,6 +10,7 @@ import './PricingPage.css';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import assets from '../assets';
+import CallToActionSection from '../components/CallToActionSection';
 
 const PricingPage: React.FC = () => {
     return (
@@ -162,7 +164,7 @@ const PricingPage: React.FC = () => {
                 </div>
             </div>
 
-            <FinalCTA />
+            <CallToActionSection />
             <Footer />
         </div>
     );

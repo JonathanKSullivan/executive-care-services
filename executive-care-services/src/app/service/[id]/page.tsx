@@ -10,6 +10,7 @@ import ServiceTestimonials from './ServiceTestimonials';
 import ServiceCTA from './ServiceCTA';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
+import CallToActionSection from '../../components/CallToActionSection';
 
 const ServicePage: React.FC = () => {
     const params = useParams<{ id: string }>(); // Use type-safe params
@@ -34,7 +35,7 @@ const ServicePage: React.FC = () => {
             {service.testimonials.length > 0 && (
                 <ServiceTestimonials testimonials={service.testimonials} />
             )}
-            <ServiceCTA ctaText={service.ctaText} />
+            <CallToActionSection />
             <Footer />
         </>
     );

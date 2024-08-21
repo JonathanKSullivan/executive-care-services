@@ -45,7 +45,7 @@
 }
 
 .navbar-links a:hover {
-    color: var(--cta-secondary-color);
+    color: var(--secondary-color); /* Use a custom CSS variable for the hover color */
 }
 
 /* Navbar toggle (hamburger icon) */

@@ -36,7 +36,7 @@ const CaseStudyListPage: React.FC = () => {
     const caseStudies = [
         {
             id: 0,
-            title: "Transforming Home Life for Jonathan S",
+            title: "Transforming Home Life for Jonathan S.",
             description: "How Executive Care Services provided holistic care and support, transforming the living environment for Jonathan S and his father.",
             thumbnail: assets.casestudy_jonathan.src
         }
