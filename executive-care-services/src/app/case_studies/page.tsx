@@ -36,8 +36,8 @@ const CaseStudyListPage: React.FC = () => {
     const caseStudies = [
         {
             id: 0,
-            title: "Transforming Home Life for Jonathan K. Sullivan",
-            description: "How Executive Care Services provided holistic care and support, transforming the living environment for Jonathan K. Sullivan and his father.",
+            title: "Transforming Home Life for Jonathan S",
+            description: "How Executive Care Services provided holistic care and support, transforming the living environment for Jonathan S and his father.",
             thumbnail: assets.casestudy_jonathan.src
         }
     ];
@@ -55,7 +55,7 @@ const CaseStudyListPage: React.FC = () => {
             </section>
 
             <h1>Our Case Study</h1>
-            <p>Explore how we&apos;ve helped Jonathan K. Sullivan and his family achieve a better quality of life.</p>
+            <p>Explore how we&apos;ve helped Jonathan S and his family achieve a better quality of life.</p>
             <div className={styles.caseStudyList}>
                 {caseStudies.map((caseStudy) => (
                     <CaseStudySummary
