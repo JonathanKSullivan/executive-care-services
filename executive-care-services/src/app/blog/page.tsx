@@ -3,7 +3,6 @@ import Parser from 'rss-parser';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import styles from './BlogPage.module.css';
-import Image from 'next/image';
 
 interface BlogPageProps {
     articles: {
@@ -57,17 +56,18 @@ const BlogPage: React.FC = async () => {
                 <div className={styles.articleList}>
                     {articles.map((article) => (
                         <div key={article.id} className={styles.article}>
-                            <img 
+                            <img
                                 src={article.image} 
                                 alt={article.title || 'Blog image'} 
                                 className={styles.articleImage} 
-                                width={300}  // Provide appropriate width
-                                height={200} // Provide appropriate height
+                                width={300} 
+                                height={200} 
+                                priority={true}
                             />
                             <div className={styles.articleContent}>
                                 <h2>{article.title}</h2>
                                 <p>{article.contentSnippet}</p>
-                                <p><small>{new Date(article.pubDate || '').toLocaleDateString()}</small></p> {/* Ensure a fallback for pubDate */}
+                                <p><small>{new Date(article.pubDate || '').toLocaleDateString()}</small></p>
                                 <a href={article.link} target="_blank" rel="noopener noreferrer" className={styles.readMoreLink}>
                                     Read More
                                 </a>
