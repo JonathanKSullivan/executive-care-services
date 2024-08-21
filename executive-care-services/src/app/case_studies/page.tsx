@@ -4,6 +4,7 @@ import styles from './CaseStudyListPage.module.css';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import Image from 'next/image';
+import assets from '../assets';
 
 interface CaseStudySummaryProps {
     id: number;
@@ -37,7 +38,7 @@ const CaseStudyListPage: React.FC = () => {
             id: 0,
             title: "Transforming Home Life for Jonathan K. Sullivan",
             description: "How Executive Care Services provided holistic care and support, transforming the living environment for Jonathan K. Sullivan and his father.",
-            thumbnail: "https://placehold.it/150x150",
+            thumbnail: assets.casestudy_jonathan
         }
     ];
 

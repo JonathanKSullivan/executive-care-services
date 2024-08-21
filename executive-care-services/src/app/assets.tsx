@@ -68,6 +68,9 @@ import service_icon_wine_delivery from './assets/service-icon-wine_delivery.png'
 import service_initial_consultation_hero from './assets/service-initial-consultation-hero.png';
 import service_trial_service_hero from './assets/service-trial-service-hero.png';
 import vip_pricing_bg  from './assets/vip-pricing-bg.png';
+import testimonial_placeholder from './assets/testimonial-placeholder.png'
+import casestudy_jonathan from './assets/casestudy-jonathan.png'
+
 
 const assets = {
     logo,
@@ -139,7 +142,9 @@ const assets = {
     service_icon_wine_delivery,
     service_initial_consultation_hero,
     service_trial_service_hero,
-    vip_pricing_bg
+    vip_pricing_bg,
+    testimonial_placeholder,
+    casestudy_jonathan
 };
 
 export default assets;

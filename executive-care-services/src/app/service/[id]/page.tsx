@@ -31,7 +31,9 @@ const ServicePage: React.FC = () => {
             <ServiceHeader title={service.title} image={service.image} />
             <ServiceDescription description={service.description} />
             <ServiceFeatures features={service.features} />
-            <ServiceTestimonials testimonials={service.testimonials} />
+            {service.testimonials.length > 0 && (
+                <ServiceTestimonials testimonials={service.testimonials} />
+            )}
             <ServiceCTA ctaText={service.ctaText} />
             <Footer />
         </>

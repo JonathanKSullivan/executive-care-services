@@ -5,8 +5,26 @@ import Image from 'next/image';
 
 const testimonials = [
     {
-        quote: "Executive Care Services has been a lifesaver for me and my family. They took our chaotic home and completely transformed it—cleaning, organizing, and coordinating necessary repairs. They even handled the emotional task of packing up a deceased relative’s belongings with great care. Their flexible food preparation and compassionate healthcare services have made a world of difference for my father and me. Thanks to ECS, I can now focus on my career and spend more quality time with my family without the constant stress of home management.",
-        name: "Jonathan K. Sullivan, Dallas, TX",
+        quote: "Natasha was great. She’s cleaned thoroughly and was very understanding and friendly. I can now focus on my career and spend more quality time with my family without the constant stress of home management. Definitely my preferred cleaner going forward.",
+        name: "Dilawer K., Frisco, TX",
+        image: assets.testimonial_placeholder.src, // Placeholder image, replace with actual client photo if available
+        rating: 5,
+    },
+    {
+        quote: "Natasha has consistently provided exceptional service. She’s always thorough and professional, making my life easier. I can now focus on my career and spend more quality time with my family without the constant stress of home management.",
+        name: "Tyna H., Garland, TX",
+        image: assets.testimonial_placeholder.src, // Placeholder image, replace with actual client photo if available
+        rating: 5,
+    },
+    {
+        quote: "Natasha has been amazing! I highly recommend her to anyone looking for a dependable cleaner. She’s made a significant difference in my life. I can now focus on my career and spend more quality time with my family without the constant stress of home management.",
+        name: "BeJay C., Plano, TX",
+        image: assets.testimonial_placeholder.src, // Placeholder image, replace with actual client photo if available
+        rating: 5,
+    },
+    {
+        quote: "Executive Care Services has been a lifesaver for me and my family. They took our chaotic home and completely transformed it—cleaning, organizing, and coordinating necessary repairs. I can now focus on my career and spend more quality time with my family without the constant stress of home management.",
+        name: "Jonathan S., Dallas, TX - CEO of an AI Company",
         image: assets.jonathan.src, // Placeholder image, replace with actual client photo
         rating: 5,
     },
