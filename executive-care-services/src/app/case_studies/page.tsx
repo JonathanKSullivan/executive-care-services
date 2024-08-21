@@ -38,7 +38,7 @@ const CaseStudyListPage: React.FC = () => {
             id: 0,
             title: "Transforming Home Life for Jonathan K. Sullivan",
             description: "How Executive Care Services provided holistic care and support, transforming the living environment for Jonathan K. Sullivan and his father.",
-            thumbnail: assets.casestudy_jonathan
+            thumbnail: assets.casestudy_jonathan.src
         }
     ];
 
