@@ -20,13 +20,13 @@ const CaseStudySummary: React.FC<CaseStudySummaryProps> = ({ id, title, descript
                 src={thumbnail} 
                 alt={`${title} Thumbnail`} 
                 className={styles.thumbnail} 
-                width={150}  // Set the desired width
-                height={150} // Set the desired height
+                width={300}  // Set the desired width
+                height={200} // Set the desired height
             />
             <div className={styles.caseStudyDetails}>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <Link href={`/case_studies/${id}`}>Read More</Link>
+                <Link href={`/case_studies/${id}`} className={styles.ctaLink}>Read More</Link> {/* No <a> tag inside Link */}
             </div>
         </div>
     );
@@ -54,19 +54,22 @@ const CaseStudyListPage: React.FC = () => {
                 </div>
             </section>
 
-            <h1>Our Case Study</h1>
-            <p>Explore how we&apos;ve helped Jonathan S and his family achieve a better quality of life.</p>
-            <div className={styles.caseStudyList}>
-                {caseStudies.map((caseStudy) => (
-                    <CaseStudySummary
-                        key={caseStudy.id}
-                        id={caseStudy.id}
-                        title={caseStudy.title}
-                        description={caseStudy.description}
-                        thumbnail={caseStudy.thumbnail}
-                    />
-                ))}
-            </div>
+            <section className={styles.caseStudiesSection}>
+                <h1>Our Case Study</h1>
+                <p>Explore how we&apos;ve helped Jonathan S and his family achieve a better quality of life.</p>
+                <div className={styles.caseStudyList}>
+                    {caseStudies.map((caseStudy) => (
+                        <CaseStudySummary
+                            key={caseStudy.id}
+                            id={caseStudy.id}
+                            title={caseStudy.title}
+                            description={caseStudy.description}
+                            thumbnail={caseStudy.thumbnail}
+                        />
+                    ))}
+                </div>
+            </section>
+
             <Footer />
         </div>
     );

@@ -20,7 +20,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ title, price, description, im
                 <h3>{title}</h3>
                 <p className="price">{price}</p>
                 <p className="description">{description}</p>
-                <a href={link} className="cta-button">Learn More</a>
+                <a href={link} className="detail-button">Learn More</a> {/* Updated button class */}
             </div>
         </div>
     );

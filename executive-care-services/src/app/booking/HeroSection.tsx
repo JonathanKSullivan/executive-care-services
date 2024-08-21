@@ -8,7 +8,6 @@ const HeroSection: React.FC = () => {
             <div className="hero-content">
                 <h1>Elevate Your Lifestyle with Bespoke Home and Health Services</h1>
                 <p>Personalized care, expert cleaning, and gourmet meals tailored to your needs.</p>
-                <a href="#booking" className="cta-button">Book a Personalized Consultation</a>
             </div>
         </section>
     );

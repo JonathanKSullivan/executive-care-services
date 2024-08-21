@@ -15,8 +15,16 @@ const Testimonials: React.FC = () => {
                     <span>- Jane S.</span>
                 </div>
                 <div className="testimonial">
-                    <p>&quot;ECS has been a game-changer, allowing me more time to focus on my work and family.&quot;</p>
+                    <p>&quot;Executive Care Services has been a lifesaver for me and my family. They took our chaotic home and completely transformed it—cleaning, organizing, and coordinating necessary repairs. They even handled the emotional task of packing up a deceased relative’s belongings with great care. Their flexible food preparation and compassionate healthcare services have made a world of difference for my father and me. Thanks to ECS, I can now focus on my career and spend more quality time with my family without the constant stress of home management.&quot;</p>
                     <span>- Jonathan K. Sullivan, CEO of Lailia AI</span>
+                </div>
+                <div className="testimonial">
+                    <p>&quot;I’ve never experienced such thorough cleaning and attentive care. Highly recommended.&quot;</p>
+                    <span>- Emily R.</span>
+                </div>
+                <div className="testimonial">
+                    <p>&quot;The luxury care package truly delivers on its promise of premium service.&quot;</p>
+                    <span>- David L.</span>
                 </div>
             </div>
         </section>

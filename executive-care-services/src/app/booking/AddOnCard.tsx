@@ -27,8 +27,8 @@ const AddOnCard: React.FC<AddOnCardProps> = ({ title, price, image, link, width,
             <div className="addon-content">
                 <h4>{title}</h4>
                 <p className="price">{price}</p>
-                <Link href={link} passHref legacyBehavior>
-                    <a className="cta-button">Learn More</a>
+                <Link href={link} passHref>
+                    <a className="detail-button">Learn More</a> {/* Ensure only one child element (the <a> tag) is passed to Link */}
                 </Link>
             </div>
         </div>

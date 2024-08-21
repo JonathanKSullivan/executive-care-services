@@ -18,13 +18,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description, buttonTex
                 <div className="hero-text">
                     <h1>{title}</h1>
                     <p>{description}</p>
-                    <button 
-                        aria-label={buttonText} 
-                        className="hero-button" 
-                        onClick={onButtonClick}
-                    >
-                        {buttonText}
-                    </button>
                 </div>
             </div>
         </section>

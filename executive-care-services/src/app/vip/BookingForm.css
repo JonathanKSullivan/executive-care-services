@@ -68,23 +68,6 @@
     display: none; /* Hide the checkbox itself */
 }
 
-.cta-button {
-    background-color: var(--cta-secondary-color);
-    color: white;
-    padding: var(--padding-small) var(--padding-large);
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-size: var(--font-size-medium);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: var(--padding-small);
-    width: 100%;
-}
-
-.cta-button:hover {
-    background-color: var(--cta-button-hover-color);
-    transform: translateY(-3px);
-}
-
 .card-element {
     padding: 0.75rem;
     border-radius: var(--border-radius);

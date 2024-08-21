@@ -44,7 +44,6 @@
     margin: 0 auto; /* Center the content */
 }
 
-
 .addon-content h4 {
     font-size: 1.25rem;
     margin-bottom: 10px;
@@ -60,22 +59,29 @@
     flex-shrink: 0; /* Prevent price from resizing */
 }
 
-.cta-button {
-    background-color: #007BFF;
+.detail-button {
+    background-color: #007bff; /* Primary blue color */
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    align-self: center; /* Center button horizontally */
-    flex-shrink: 0; /* Prevent button from resizing */
+    font-size: 1rem;
+    font-weight: bold; /* Make the text bold for emphasis */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    display: inline-block; /* Ensure the button remains an inline block */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.detail-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.detail-button:focus {
+    outline: 3px solid #0056b3; /* Add a focus outline for accessibility */
 }
 
 /* Responsive adjustments for different viewports */
@@ -98,7 +104,7 @@
         font-size: 1rem; /* Adjust font size for mobile */
     }
 
-    .cta-button {
+    .detail-button {
         padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
         font-size: 0.875rem; /* Adjust font size for smaller screens */
     }

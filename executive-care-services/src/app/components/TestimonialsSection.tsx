@@ -25,7 +25,7 @@ const testimonials = [
     {
         quote: "Executive Care Services has been a lifesaver for me and my family. They took our chaotic home and completely transformed it—cleaning, organizing, and coordinating necessary repairs. I can now focus on my career and spend more quality time with my family without the constant stress of home management.",
         name: "Jonathan S., Dallas, TX - CEO of an AI Company",
-        image: assets.jonathan.src, // Placeholder image, replace with actual client photo
+        image: assets.jonathan.src, // Replace with actual client photo
         rating: 5,
     },
 ];
@@ -41,8 +41,8 @@ const TestimonialsSection: React.FC = () => {
                             src={testimonial.image} 
                             alt={testimonial.name} 
                             className="testimonial-image" 
-                            width={200} // Add width property
-                            height={200} // Add height property to maintain aspect ratio
+                            width={200} 
+                            height={200} 
                         />
                         <p className="testimonial-quote">&ldquo;{testimonial.quote}&rdquo;</p>
                         <p className="testimonial-name">{testimonial.name}</p>
@@ -57,21 +57,21 @@ const TestimonialsSection: React.FC = () => {
                     <Image 
                         src={assets.google_reviews.src} 
                         alt="Google Reviews" 
-                        width={100} // Add width property for the logo
-                        height={30} // Add height property for the logo
+                        width={100} 
+                        height={30} 
                     />
                 </a>
                 <a href="https://www.yelp.com/biz/Your-Business-Name" target="_blank" rel="noopener noreferrer">
                     <Image 
                         src={assets.yelp.src} 
                         alt="Yelp Reviews" 
-                        width={100} // Add width property for the logo
-                        height={30} // Add height property for the logo
+                        width={100} 
+                        height={30} 
                     />
                 </a>
             </div>
         </section>
     );
-}
+};
 
 export default TestimonialsSection;
