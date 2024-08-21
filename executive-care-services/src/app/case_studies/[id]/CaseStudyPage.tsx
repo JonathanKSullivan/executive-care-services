@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import CaseStudyHeader from './CaseStudyHeader';
 import CaseStudyIntro from './CaseStudyIntro';
@@ -5,6 +7,7 @@ import CaseStudyDetails from './CaseStudyDetails';
 import CaseStudyTestimonial from './CaseStudyTestimonial';
 import CaseStudyCTA from './CaseStudyCTA';
 import './CaseStudyPage.css';
+import CallToActionSection from '../../../app/components/CallToActionSection';
 
 interface CaseStudyPageProps {
     title: string;
@@ -38,7 +41,7 @@ const CaseStudyPage: React.FC<CaseStudyPageProps> = ({
             <CaseStudyIntro text={intro} />
             <CaseStudyDetails details={details} />
             <CaseStudyTestimonial testimonial={testimonial} />
-            <CaseStudyCTA text={ctaText} />
+            <CallToActionSection />
         </div>
     );
 };
