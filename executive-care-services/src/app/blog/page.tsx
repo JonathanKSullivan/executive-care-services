@@ -57,7 +57,7 @@ const BlogPage: React.FC = async () => {
                 <div className={styles.articleList}>
                     {articles.map((article) => (
                         <div key={article.id} className={styles.article}>
-                            <Image 
+                            <img 
                                 src={article.image} 
                                 alt={article.title || 'Blog image'} 
                                 className={styles.articleImage} 
