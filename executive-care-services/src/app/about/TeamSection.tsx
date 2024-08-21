@@ -1,19 +1,14 @@
 import React from 'react';
 import './TeamSection.css';
 import Image from 'next/image';
+import assets from '../assets';
 
 const teamMembers = [
     { 
-        name: 'Jane Doe', 
+        name: 'Natasha Sobers', 
         role: 'Founder & CEO', 
-        image: 'https://placehold.it/300x300', 
-        bio: 'With over 20 years of experience in the luxury service industry, Jane has a passion for excellence and a vision for creating the ultimate client experience.' 
-    },
-    { 
-        name: 'John Smith', 
-        role: 'Head of Operations', 
-        image: 'https://placehold.it/300x300', 
-        bio: 'John ensures that every aspect of our service runs smoothly, from initial consultation to the final touch, with a focus on quality and client satisfaction.' 
+        image: assets.about_natasha.src, 
+        bio: 'Natasha Sobers is the Founder & CEO of Executive Care Services. With over a decade of experience in legal documentation and customer service, she established Executive Care Services to deliver personalized, luxury home care with a focus on trust and reliability. Natasha\'s dedication to excellence ensures every service meets the highest standards, making her company a trusted partner in enhancing clients\' quality of life.' 
     },
     // Add more team members as needed
 ];

@@ -70,6 +70,7 @@ import service_trial_service_hero from './assets/service-trial-service-hero.png'
 import vip_pricing_bg  from './assets/vip-pricing-bg.png';
 import testimonial_placeholder from './assets/testimonial-placeholder.png'
 import casestudy_jonathan from './assets/casestudy-jonathan.png'
+import about_natasha from './assets/about-jonathan.png'
 
 
 const assets = {
@@ -144,7 +145,8 @@ const assets = {
     service_trial_service_hero,
     vip_pricing_bg,
     testimonial_placeholder,
-    casestudy_jonathan
+    casestudy_jonathan,
+    about_natasha
 };
 
 export default assets;
