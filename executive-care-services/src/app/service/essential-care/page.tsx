@@ -1,26 +1,18 @@
-'use client';
+'use client'
 
 import React from 'react';
-import { useParams } from 'next/navigation';
-import services from './servicesData';
-import ServiceHeader from './ServiceHeader';
-import ServiceDescription from './ServiceDescription';
-import ServiceFeatures from './ServiceFeatures';
-import ServiceTestimonials from './ServiceTestimonials';
-import ServiceCTA from './ServiceCTA';
+import services from '../servicesData';
+import ServiceHeader from '../components/ServiceHeader';
+import ServiceDescription from '../components/ServiceDescription';
+import ServiceFeatures from '../components/ServiceFeatures';
+import ServiceTestimonials from '../components/ServiceTestimonials';
+import ServiceCTA from '../components/ServiceCTA';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CallToActionSection from '../../components/CallToActionSection';
 
-const ServicePage: React.FC = () => {
-    const params = useParams<{ id: string }>(); // Use type-safe params
-    const id = params?.id;
-
-    if (!id) {
-        return <p>Loading...</p>;
-    }
-
-    const service = services.find(service => service.id === id);
+const EssentialCarePage: React.FC = () => {
+    const service = services.find(service => service.id === 'essential-care');
 
     if (!service) {
         return <p>Service not found</p>;
@@ -41,4 +33,4 @@ const ServicePage: React.FC = () => {
     );
 };
 
-export default ServicePage;
+export default EssentialCarePage;
