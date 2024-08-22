@@ -1,5 +1,5 @@
 [build]
-  command = "cd executive-care-services && npm install && npm run build"
+  command = "cd executive-care-services && npm install && npm run build && netlify build --clearCache"
   publish = "executive-care-services/.next"
 
 [build.environment]
