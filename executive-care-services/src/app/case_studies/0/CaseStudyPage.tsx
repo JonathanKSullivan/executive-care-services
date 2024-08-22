@@ -7,7 +7,7 @@ import CaseStudyDetails from './CaseStudyDetails';
 import CaseStudyTestimonial from './CaseStudyTestimonial';
 import CaseStudyCTA from './CaseStudyCTA';
 import './CaseStudyPage.css';
-import CallToActionSection from '../../../app/components/CallToActionSection';
+import CallToActionSection from '../../components/CallToActionSection';
 
 interface CaseStudyPageProps {
     title: string;
