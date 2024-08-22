@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import services from '../servicesData';
@@ -23,9 +23,10 @@ const PhysicalTherapyCoordinationPage: React.FC = () => {
             <Navbar />
             <ServiceHeader title={service.title} image={service.image} />
             <ServiceDescription description={service.description} />
-            <ServiceFeatures features({service.features} />
+            {/* Correcting the syntax for passing props */}
+            <ServiceFeatures features={service.features} />
             {service.testimonials.length > 0 && (
-                <ServiceTestimonials testimonials({service.testimonials} />
+                <ServiceTestimonials testimonials={service.testimonials} />
             )}
             <CallToActionSection />
             <Footer />

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { useRouter } from 'next/navigation'; // Import useRouter from next/navigation
 import './CtaButton.css'; // Import CSS for the button

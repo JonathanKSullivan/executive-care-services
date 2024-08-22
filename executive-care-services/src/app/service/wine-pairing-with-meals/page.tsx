@@ -19,11 +19,12 @@ const WinePairingWithMealsPage: React.FC = () => {
     return (
         <>
             <Navbar />
-            <ServiceHeader title({service.title} image({service.image} />
-            <ServiceDescription description({service.description} />
-            <ServiceFeatures features({service.features} />
+            {/* Corrected JSX syntax */}
+            <ServiceHeader title={service.title} image={service.image} />
+            <ServiceDescription description={service.description} />
+            <ServiceFeatures features={service.features} />
             {service.testimonials.length > 0 && (
-                <ServiceTestimonials testimonials({service.testimonials} />
+                <ServiceTestimonials testimonials={service.testimonials} />
             )}
             <CallToActionSection />
             <Footer />
