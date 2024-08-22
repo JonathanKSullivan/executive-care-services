@@ -1,6 +1,6 @@
 [build]
   command = "cd executive-care-services && npm install && npm run build"
-  publish = "out"
+  publish = "executive-care-services/.next"
 
 [build.environment]
   NODE_VERSION = "20.15.1"
