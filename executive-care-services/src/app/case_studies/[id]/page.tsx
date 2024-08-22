@@ -4,8 +4,31 @@ import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import assets from '@/app/assets';
 
+// Define the interface for case study data
+interface CaseStudyDetails {
+    challenge: string;
+    solution: string;
+    results: string;
+}
+
+interface Testimonial {
+    clientName: string;
+    clientTitle: string;
+    quote: string;
+    image: string;
+}
+
+interface CaseStudyData {
+    title: string;
+    subtitle: string;
+    intro: string;
+    details: CaseStudyDetails;
+    testimonial: Testimonial;
+    ctaText: string;
+}
+
 // Case study data
-const executiveCareCaseStudy = {
+const executiveCareCaseStudy: CaseStudyData = {
     title: "Transforming Home Life for Jonathan S.",
     subtitle: "Comprehensive Home and Health Care Services for an Improved Quality of Life",
     intro: "Jonathan S., CEO at an AI company, faced significant challenges in managing his father's care and household maintenance. With his father suffering from cognitive decline and Jonathan himself being partially blind, the situation became increasingly overwhelming. Their home was in disarray, and they relied heavily on fast food for daily meals, which further impacted their well-being.",
@@ -23,21 +46,32 @@ const executiveCareCaseStudy = {
     ctaText: "Experience the Transformation. Contact Executive Care Services Today!",
 };
 
-const ExecutiveCareCaseStudy = () => {
+const ExecutiveCareCaseStudy: React.FC<{ caseStudyData: CaseStudyData }> = ({ caseStudyData }) => {
     return (
         <>
             <Navbar />
             <CaseStudyPage
-                title={executiveCareCaseStudy.title}
-                subtitle={executiveCareCaseStudy.subtitle}
-                intro={executiveCareCaseStudy.intro}
-                details={executiveCareCaseStudy.details}
-                testimonial={executiveCareCaseStudy.testimonial}
-                ctaText={executiveCareCaseStudy.ctaText}
+                title={caseStudyData.title}
+                subtitle={caseStudyData.subtitle}
+                intro={caseStudyData.intro}
+                details={caseStudyData.details}
+                testimonial={caseStudyData.testimonial}
+                ctaText={caseStudyData.ctaText}
             />
             <Footer />
         </>
     );
+};
+
+// This function runs at build time and passes the props to the component
+export const getStaticProps = async () => {
+    // Here you could fetch data from an API or database if needed
+
+    return {
+        props: {
+            caseStudyData: executiveCareCaseStudy,
+        },
+    };
 };
 
 export default ExecutiveCareCaseStudy;
