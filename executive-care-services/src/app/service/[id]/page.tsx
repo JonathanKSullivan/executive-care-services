@@ -11,6 +11,7 @@ import ServiceCTA from './ServiceCTA';
 import Navbar from '../../Navbar';
 import Footer from '../../Footer';
 import CallToActionSection from '../../components/CallToActionSection';
+import style from 'styled-jsx/style';
 
 const ServicePage: React.FC = () => {
     const params = useParams<{ id: string }>(); // Use type-safe params

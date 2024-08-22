@@ -18,7 +18,7 @@ interface BlogPageProps {
 
 const fetchRSSFeed = async () => {
     const parser = new Parser();
-    const feed = await parser.parseURL('https://medium.com/feed/@marketing_47888');
+    const feed = await parser.parseURL('https://medium.com/feed/@natasha_38136');
     return feed.items.map(item => {
         // Extract image from the content
         const content = item['content:encoded'] || '';
