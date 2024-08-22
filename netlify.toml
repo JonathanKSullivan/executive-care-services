@@ -3,7 +3,7 @@
   publish = "executive-care-services/.next"
 
 [build.environment]
-  NODE_VERSION = "20.x"
+  NODE_VERSION = "20.15.1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
