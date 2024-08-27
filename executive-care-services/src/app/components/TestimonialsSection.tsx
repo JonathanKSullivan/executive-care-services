@@ -61,7 +61,7 @@ const TestimonialsSection: React.FC = () => {
                         height={30} 
                     />
                 </a>
-                <a href="https://www.yelp.com/biz/Your-Business-Name" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.yelp.com/biz/executive-care-services-dallas" target="_blank" rel="noopener noreferrer">
                     <Image 
                         src={assets.yelp.src} 
                         alt="Yelp Reviews" 

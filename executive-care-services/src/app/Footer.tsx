@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="/home">Home</a></li>
-                        <li><a href="/services">Services</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>

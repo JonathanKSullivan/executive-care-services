@@ -25,13 +25,13 @@ const ContactDetails: React.FC = () => {
             <div className="social-media">
                 <h3>Follow Us</h3>
                 <div className="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/profile.php?id=61565108966677" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/YourExecCare" target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/yourexeccare/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
                     </a>
                 </div>
